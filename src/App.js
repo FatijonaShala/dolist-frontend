@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.scss';
+import "bootstrap/dist/css/bootstrap.css";
+import {Button, Alert, Row, Col} from 'react-bootstrap';
+import Menu from './Components/Menu';
+import RightSide from './Components/RightSide';
+import Login from './Components/Login';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          DoList
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return ( 
+      <div className = "App">
+        <Menu/>
+        <Row className="landing">
+          <Col><Login/></Col>         
+          <Col><RightSide/></Col>
+        </Row>
+      </div>
+    );
 }
 
 export default App;
