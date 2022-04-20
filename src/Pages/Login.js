@@ -1,8 +1,7 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
-import styles from '../styles/Login.module.scss';
+import styles from '../Styles/Login.module.scss';
 import { Image } from "react-bootstrap";
-import { Container, Row, Col } from 'react-bootstrap';
+import {Form, Container, Row, Col } from 'react-bootstrap';
 
 function Login() {
     return ( 
