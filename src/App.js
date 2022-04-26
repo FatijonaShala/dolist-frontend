@@ -1,35 +1,55 @@
 import React from 'react';
-import './App.scss';
+import './Styles/App.scss';
 import "bootstrap/dist/css/bootstrap.css";
-import Login from './Pages/Login';
-import Navbar from './Pages/Navbar';
-import Header from './Pages/Header';
-import Footer from './Pages/Footer';
-import Home from './Pages/Home';
-import CreateList from './Pages/CreateList';
-import MyCollections from './Pages/MyCollections';
-import Analytics from './Pages/Analytics';
-import Profile from './Pages/Profile';
-import About from './Pages/About';
+import Login from './Pages/Login/Login';
+import Navbar from './Pages/Navbar/Navbar';
+import Header from './Pages/Header/Header';
+import Footer from './Pages/Footer/Footer';
+import Home from './Pages/Home/Home';
+import CreateList from './Pages/CreateList/CreateList';
+import MyCollections from './Pages/My Collections/MyCollections';
+import Analytics from './Pages/Analytics/Analytics';
+import Profile from './Pages/Profile/Profile';
+import About from './Pages/About/About';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
+
 function App() {
+          /*
+
+          }         
+    const routes = [
+               { path: "/", Component: <Home />, private: false},
+               { path: "/login", Component: <Login />, private: false},
+               { path: "/newList", Component: <CreateList />, private: false},
+               { path: "/myCollections", Component: <MyCollections />, private: false},
+               { path: "/analytics", Component: <Analytics />, private: false},
+               { path: "/profile", Component: <Profile />, private: false},
+               { path: "/about", Component: <About />, private: false}
+                  ];
+      
+                  const listRoutes = routes.map((routes) =>
+                  <li>{routes}</li>
+                  );
+                */
+
   return ( 
     <div className = "App" >
-
+     
     <Router>
       <Navbar/>
       <Header/>
       <Routes>
-      <Route path="/Login" element={<Login/>}/>
-        <Route path="/Home" element={<Home/>}/>
-        <Route path="/NewList" element={<CreateList/>}/>
-        <Route path="/MyLists" element={<MyCollections/>}/>
-        <Route path="/Analytics" element={<Analytics/>}/>
-        <Route path="/Profile" element={<Profile/>}/>
-        <Route path="/About" element={<About/>}/>
+     {/* <ul>{listRoutes}</ul>*/}
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/newList" element={<CreateList/>}/>
+        <Route path="/myLists" element={<MyCollections/>}/>
+        <Route path="/analytics" element={<Analytics/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/about" element={<About/>}/>
       </Routes>
       <Footer/>
     </Router>
