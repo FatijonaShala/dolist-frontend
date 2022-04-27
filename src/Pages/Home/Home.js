@@ -3,8 +3,8 @@ import React from 'react';
 import Homestyle from './Home.module.scss';
 
 function Home() {
-    return ( <
-        div > Home < /div>
+    return ( 
+      <div> Home </div>
 
 
     )
