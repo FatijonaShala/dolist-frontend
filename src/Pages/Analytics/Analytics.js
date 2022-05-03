@@ -1,5 +1,5 @@
 import React from 'react';
-import Analyticsstyle from './Analytics.module.scss';
+import style from './analytics.module.scss';
 
 function Analytics() {
     return ( 

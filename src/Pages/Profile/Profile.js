@@ -1,10 +1,17 @@
 import React from 'react';
-import Profilestyle from './Profile.module.scss';
+import style from './profile.module.scss';
+
+
 
 function Profile() {
-  return (
-    <div>Profile</div>
+  return ( 
+    <div >
+      <h3>Profile</h3>
+    </div>
+
+
   )
 }
 
 export default Profile
+

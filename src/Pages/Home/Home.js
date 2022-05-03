@@ -1,10 +1,10 @@
 import { Button, a } from 'bootstrap';
 import React from 'react';
-import Homestyle from './Home.module.scss';
+import Homestyle from './home.module.scss';
 
 function Home() {
     return ( 
-      <div> Home </div>
+      <div > Home </div>
 
 
     )

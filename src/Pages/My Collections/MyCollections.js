@@ -1,5 +1,5 @@
 import React from 'react';
-import MyCollectionstyle from './MyCollections.module.scss';
+import mstyle from './myCollections.module.scss';
 
 function MyCollections() {
     return ( 
