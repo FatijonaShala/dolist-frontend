@@ -5,7 +5,7 @@ import Navstyle from './navbar.module.scss';
 const Menu = () => {
   return (
     <div >
-      <Navbar collapseOnSelect expand="lg" bg="white" >
+      <Navbar collapseOnSelect expand="lg" bg="white" className={Navstyle.nav}>
         <Container className={Navstyle.Container} >
           <Navbar.Brand href="/home" > DoList </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

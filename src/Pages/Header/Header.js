@@ -16,8 +16,8 @@ function Header() {
                                 <span className={style.mobile_block}> for busy people! </span>
                             </small >
                             <h1 className={`${style.animated} ${style.animated_text}`}>
-                                <span className="mr-2" > we help you to</span>
-                                <div className={style.animated_info}>{items && items.map((elem) => <span className={style.animated_item}></span>)}</div>
+                                <span className="mr-2" > we help you to </span>
+                                <div className={style.animated_info}>{items && items.map((elem) => <span className={style.animated_item}>{elem}</span>)}</div>
                             </h1>
                             <div className={`mt-4 ${style.custom_btn_group}`}>
                                 <a href="login" className={`btn ${style.costum_btn} ${style.costum_btn_bg} ${style.costum_btn_link}`} >
