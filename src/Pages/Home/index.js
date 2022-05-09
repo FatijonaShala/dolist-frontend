@@ -1,10 +1,3 @@
-import Home from './Home.js';
+import Home from './Home.jsx';
 
-function index() {
-    return ( 
-     <Home/>
-    )
-}
-
-
-export default index;
+export default Home;

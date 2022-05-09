@@ -1,10 +1,3 @@
-import Profile from './Profile.js';
- 
-function index() {
-    return ( 
-     <Profile/>
-    )
-}
+import Profile from './Profile.jsx';
 
-
-export default index;
+export default Profile;

@@ -118,7 +118,7 @@ strong {
     &:hover {
         color: $main-color;
     }
-    &.custom_btn-bg {
+    &.custom_btn_bg {
         background: $button-color;
         color: $text-white;
         &:hover {
@@ -513,7 +513,7 @@ strong {
             border-color: $main-color;
         }
     }
-    .submit-btn {
+    .submit_btn {
         background: $main-color;
         border-radius: 50px;
         color: $text-white;

@@ -1,10 +1,3 @@
-import Login from './Login.js';
+import Login from './Login.jsx';
 
-function index() {
-    return ( 
-     <Login/>
-    )
-}
-
-
-export default index;
+export default Login;

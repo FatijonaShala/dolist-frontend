@@ -1,9 +1,3 @@
-import About from './About.js';
+import About from './About.jsx';
 
-function index() {
-    return ( 
-     <About/>
-    )
-}
-
-export default index;
+export default About;

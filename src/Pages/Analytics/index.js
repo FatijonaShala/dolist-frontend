@@ -1,11 +1,3 @@
-import Analytics from './Analytics.js';
+import Analytics from './Analytics.jsx';
 
-
-
-function index() {
-    return ( 
-     <Analytics/>
-    )
-}
-
-export default index;
+export default Analytics;

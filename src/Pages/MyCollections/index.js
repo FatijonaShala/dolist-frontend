@@ -1,10 +1,3 @@
-import MyCollections from './MyCollections.js';
+import MyCollections from './MyCollections.jsx';
 
-function index() {
-    return ( 
-     <MyCollections/>
-    )
-}
-
-
-export default index;
+export default MyCollections;

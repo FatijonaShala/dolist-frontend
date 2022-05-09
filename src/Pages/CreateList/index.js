@@ -1,14 +1,3 @@
-import CreateList from './CreateList.js';
+import CreateList from './CreateList.jsx';
 
-
-
-
-function index() {
-    return ( 
-        <CreateList />
-    )
-}
-
-
-
-export default index;
+export default CreateList;
