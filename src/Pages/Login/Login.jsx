@@ -1,32 +1,55 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './login.module.scss';
 import { Image } from "react-bootstrap";
-import {Form, Container, Row, Col } from 'react-bootstrap';
+import {Form, Container, Row, Col, Button } from 'react-bootstrap';
+
+
 
 function Login() {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  function validateForm() {
+    return username.length > 0 && password.length > 0;
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+
     return ( 
       <Container >
-        <div >
-          <Row className="landing" >
-            <Col >
-              <Form style={{ width: "80%", marginLeft: "10%", marginTop: "23%" }} >
-                <h3 > Sign in </h3>
+        <Row>
+          <Col>
+            <div>
+              <Image src="../img/bg.png" className="w-5 ml-5 mt-1 pt-1" thumbnail style={{ border: "none" }} />
+            </div>
+          </Col>
+          <Col>
+            <div>
+              <br/>
+              <Form className={` text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`} onSubmit={handleSubmit} >
+                <h3 className="mb-4" > Sign in </h3>
                 <Form.Group>
-                  <Form.Control type="username" placeholder="Username" />
+                  <Form.Control type="username" placeholder="Username" className={`mb-3 ${styles.form_control}`} value={username}
+                    onChange={(u) => setUsername(u.target.value)} />
                 </Form.Group>
-                <br />
-                <Form.Group >
-                  <Form.Control type="password" placeholder="Password" />
+                <Form.Group>
+                  <Form.Control type="password" placeholder="Password" className={`mb-3 ${styles.form_control}`} value={password}
+                    onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
-                <br />
-                <button className={styles.button} > Sign in </button>
+                <Form.Group className="d-flex justify-content-center mb-4">
+                  <Form.Check label="Remember me" />
+                </Form.Group>
+                <div>
+                  <Button type='submit' className={`btn ${styles.form_control} && ${styles.submit_btn}`} >Login</Button>
+                </div>
               </Form>
-            </Col>
-            <Col>
-              <Image src="../img/bg.png" width="85%" thumbnail style={{ border: "none" }} />
-            </Col>
-          </Row>
-        </div>
+            </div>
+          </Col>
+        </Row>
       </Container>
 
     )
