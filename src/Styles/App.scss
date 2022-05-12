@@ -350,7 +350,7 @@ strong {
             border-bottom: 1px solid #1f1f1f;
         }
     }
-    .small-text {
+    .small_text {
         background: #0d0c15;
         color: $text-white;
     }
@@ -496,9 +496,9 @@ strong {
 }
 
 // CONTACT FORM
-.contact-form {
+.contact_form {
     position: relative;
-    .form-control {
+    .form_control {
         background: transparent;
         border-radius: 2px;
         outline: none;
@@ -527,7 +527,7 @@ strong {
     }
 }
 
-.contact-info {
+.contact_info {
     background: $button-color;
     border-radius: 0 0 3px 3px;
     position: relative;
@@ -539,7 +539,7 @@ strong {
 }
 
 // SOCIAL LINKS
-.social-links {
+.social_links {
     .uil {
         color: #f7f3f3;
         font-size: 20px;
@@ -575,7 +575,7 @@ strong {
     .contact-form {
         margin-top: 2em;
     }
-    .contact-info {
+    .contact_info {
         padding: 0 2rem;
     }
 }
@@ -633,10 +633,10 @@ strong {
     .mobile_block {
         display: block;
     }
-    .contact-info {
+    .contact_info {
         flex-direction: column;
     }
-    .social-links {
+    .social_links {
         li {
             display: inline-block;
             vertical-align: top;
