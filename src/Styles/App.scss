@@ -304,19 +304,19 @@ strong {
 }
 
 // COPYRIGHT TEXT
-.copyright-text {
+.copyright_text {
     font-size: 16px;
     font-weight: $font-weight-normal;
     display: block;
 }
 
 // COLOR MODE
-.color-mode {
+.color_mode {
     font-weight: $font-weight-bold;
     cursor: pointer;
 }
 
-.color-mode-icon {
+.color_mode_icon {
     position: relative;
     right: 6px;
     &:after {
@@ -362,7 +362,7 @@ strong {
     h4,
     h5,
     h6,
-    .color-mode {
+    .color_mode {
         color: $text-white;
     }
     .owl-carousel {
@@ -485,13 +485,6 @@ strong {
                 }
             }
         }
-    }
-}
-
-// GOOGLE MAP
-.google-map {
-    iframe {
-        width: 100%;
     }
 }
 
