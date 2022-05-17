@@ -1,5 +1,6 @@
 import React from 'react';
 import mstyle from './myCollections.module.scss';
+import LayoutWrapper from '../../hoc/Layout';
 
 function MyCollections() {
     return ( 
@@ -7,4 +8,4 @@ function MyCollections() {
     )
 }
 
-export default MyCollections
+export default LayoutWrapper(MyCollections);

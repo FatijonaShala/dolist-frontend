@@ -3,6 +3,7 @@ import styles from './login.module.scss';
 import { Image } from "react-bootstrap";
 import {Form, Container, Row, Col, Button } from 'react-bootstrap';
 
+import LayoutWrapper from '../../hoc/Layout';
 
 
 function Login() {
@@ -54,4 +55,4 @@ function Login() {
 
     )
 }
-export default Login;
+export default LayoutWrapper(Login);

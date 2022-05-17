@@ -1,5 +1,6 @@
 import React from 'react';
 import NewListtyle from './createList.module.scss';
+import LayoutWrapper from '../../hoc/Layout';
 
 function CreateList() {
     return ( 
@@ -7,4 +8,4 @@ function CreateList() {
     )
 }
 
-export default CreateList
+export default LayoutWrapper(CreateList);

@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './profile.module.scss';
 
+import LayoutWrapper from '../../hoc/Layout';
+
 
 
 function Profile() {
@@ -13,5 +15,5 @@ function Profile() {
   )
 }
 
-export default Profile
+export default LayoutWrapper(Profile);
 

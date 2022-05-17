@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './analytics.module.scss';
+import LayoutWrapper from '../../hoc/Layout';
 
 function Analytics() {
     return ( 
@@ -7,4 +8,4 @@ function Analytics() {
     )
 }
 
-export default Analytics
+export default LayoutWrapper(Analytics);

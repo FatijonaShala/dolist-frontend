@@ -416,9 +416,6 @@ strong {
     h2 {
         font-size: 2em;
     }
-    .animated-item {
-        font-size: 28px;
-    }
     .navbar_collapse {
         background: #ffffff;
         text-align: center;
@@ -430,13 +427,6 @@ strong {
 }
 
 @media (max-width: 580px) {
-    .custom_btn_group {
-        text-align: center;
-    }
-    .custom_btn {
-        display: block;
-        margin: 10px 0;
-    }
     .timeline-info small {
         display: block;
         margin: 10px 0 0 0;
