@@ -1,16 +1,20 @@
-import { Button, a } from 'bootstrap';
+
 import React from 'react';
-import Homestyle from './home.module.scss';
-import Header from '../../Components/Header';
+import style from './home.module.scss';
 import LayoutWrapper from '../../hoc/Layout';
+import Header from '../../Components/Header/Header';
 
 function Home() {
+ 
     return ( 
-      
-      <div >
+      <div>
         <Header/>
-        Home 
+        Home
         </div>
+      
+
+
+      
 
 
     )

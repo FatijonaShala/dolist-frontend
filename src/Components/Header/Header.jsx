@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { section, Button, Container, Row, } from 'react-bootstrap';
 import style from './header.module.scss';
 
+
 function Header() {
     const [items] = useState(['organize', 'progress', 'focus'])
     return (
