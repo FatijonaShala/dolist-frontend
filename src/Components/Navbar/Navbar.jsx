@@ -9,7 +9,7 @@ const Menu = () => {
     
       <Navbar collapseOnSelect expand="lg" bg="white" className={`${Navstyle.nav} && navbar-expand-sm && navbar-light`}>
         <Container>
-          <Navbar.Brand href="/home"> 
+          <Navbar.Brand href="/"> 
           <i>
           <User className={Navstyle.color_mode_icon}  />
           </i>
@@ -18,7 +18,7 @@ const Menu = () => {
           <Navbar.Collapse id="responsive-navbar-nav" >
             <Nav className="mx-auto" >
               <Nav.Link href="/newList" > New List</Nav.Link>
-              <Nav.Link href="/myLists" > My Lists </Nav.Link>
+              <Nav.Link href="/myCollections" > My Lists </Nav.Link>
               <Nav.Link href="/analytics" > Analytics </Nav.Link>
               
               <Nav.Link href="/profile" > Profile </Nav.Link>

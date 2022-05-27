@@ -25,7 +25,7 @@ function Login() {
         <Row>
           <Col>
             <div>
-              <Image src="../img/bg.png" className="w-5 ml-5 mt-1 pt-1" thumbnail style={{ border: "none" }} />
+              <Image src="../img/about1.png" className="w-5 ml-5 mt-1 pt-1" thumbnail style={{ border: "none" }} />
             </div>
           </Col>
           <Col>
@@ -44,8 +44,14 @@ function Login() {
                 <Form.Group className="d-flex justify-content-center mb-1">
                   <Form.Check label="Remember me" />
                 </Form.Group>
+            
                <div>
                   <Button type='submit' className={`btn ${styles.form_control} && ${styles.submit_btn}`} >Login</Button>
+                </div>
+                <div>
+                <Form.Group>
+                <span  className="mr-2">Don't have an account? <a href="#">Sign up now</a></span>
+                </Form.Group>
                 </div>
               </Form>
             </div>

@@ -22,7 +22,7 @@ function Header() {
                             </h1>
                             <div className={` ${style.custom_btn_group} && mt-4`}>
                                     <a href="login" className={`btn ${style.custom_btn} && ${style.custom_btn_bg}  && ${style.custom_btn_link}`}>
-                                      Create your to do list </a></div>
+                                      Login to create your list </a></div>
                              </div>
                         </div>
                     

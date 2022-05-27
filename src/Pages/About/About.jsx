@@ -46,16 +46,19 @@ function About() {
 
 
    
-    <section className="contact py-3" id="contact">
+    <section className="contact py-5" id="contact">
       <Container>
         <Row>
-          
           <div className="col-lg-5 mr-lg-5 col-12">
             <div className="google-map w-100">
                 {/* ={style.timeline_info}> */}
-               
-            </div>
-            <div className={` ${style.contact_info} && d-flex justify-content-between align-items-center py-4 px-lg-5`}>
+                <div className={`${style.about_image} && png`}>
+                <img src="../img/about1.png" className="img-fluid" alt="svg" />
+              </div>
+
+               </div>
+          
+            {/* <div className={` ${style.contact_info} && d-flex justify-content-between align-items-center py-4 px-lg-5`}>
                 <div className={style.contact_info_item}>
                   <h3 className="mb-3 text-white">Say hello</h3>
                   <p className="footer-text mb-0">00 000 000 </p>
@@ -67,12 +70,12 @@ function About() {
                      <li><a href="#" className="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
                      <li><a href="#" className="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li>
                 </ul>
-            </div>
-          </div>
-
+            </div> */}
+          </div> 
+  
           <div className="col-lg-6 col-12">
-            <div className={style.contact_form}>
-              <h2 className="mb-4">Contact</h2>
+            <div className={` ${style.contact_form}`}>
+              <h2 className="mb-4">Contact Us</h2>
               <Form>
                 <Row>
                   <div className="col-lg-6 col-12">
@@ -83,12 +86,12 @@ function About() {
                     <Form.Control type="email" className={style.form_control} name="email" placeholder="Email" id="email"/>
                   </div>
 
-                  <div class="col-12">
+                  <div className="col-12">
                     <textarea name="message" rows="6" className={style.form_control} id="message" placeholder="Message"></textarea>
                   </div>
 
                   <div className="ml-lg-auto col-lg-5 col-12">
-                    <Form.Control type="submit" className={`${style.form_control} && ${style.submit_btn}`} value="Send Button"/>
+                    <Form.Control type="submit" className={`${style.form_control} && ${style.submit_btn}`} value="Send Message"/>
                   </div>
                 </Row>
               </Form>
