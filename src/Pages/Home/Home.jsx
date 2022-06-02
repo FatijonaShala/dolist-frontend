@@ -4,12 +4,20 @@ import style from './home.module.scss';
 import LayoutWrapper from '../../hoc/Layout';
 import Header from '../../Components/Header/Header';
 
+
+
+
+
 function Home() {
+
+
  
     return ( 
       <div>
         <Header/>
-        Home
+      
+
+        Home 
         </div>
       
 
