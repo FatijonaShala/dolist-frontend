@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Register from './Register';
+import Login from './Login';
 import Home from '../Home';
 
 const Form = () => {
@@ -8,15 +9,18 @@ const Form = () => {
     function submitForm() {
         setIsSubmitted(true);
     }
-    return (
+    return ( 
         <>
-            <div>
-             {!isSubmitted ? (
-                <Register submitForm={submitForm} />
+        <div > {!isSubmitted ? ( 
+            <>
+                <Register submitForm = { submitForm }/> 
+                <Login submitForm = { submitForm }/> 
+                </>
             ) : ( 
-                <Home/>
-            )}  
-            </div>
+            <Home />
+            )
+        } 
+        </div> 
         </>
     );
 };
