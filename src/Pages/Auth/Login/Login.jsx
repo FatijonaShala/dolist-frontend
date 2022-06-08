@@ -1,16 +1,41 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from '../Form.module.scss';
-import { Image } from "react-bootstrap";
-import {Form, Container, Row, Col, Button } from 'react-bootstrap';
-import validate from '../validation';
+import {Form, Container, Row, Col, Button, Image } from 'react-bootstrap';
 import LayoutWrapper from '../../../hoc/Layout';
-import useForm from '../useForm';
+import validation from "./validation";
 
 
-function Login({ submitForm}) {
+function Login({ submitForm }) {
+  const [values, setValues] = useState({
+    email: "",
+    username: "",
+    password: "",
+    password2: ""
+  });
 
-  const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate);
+  const [errors, setErrors] = useState({});
+  const [dataIsCorrect, setDataIsCorrect] = useState(false);
 
+  const handleChange = (e) =>{
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    })
+  };
+
+
+  const handleFormSubmit = (e) =>{
+    e.preventDefault();
+    setErrors(validation(values));
+    setDataIsCorrect(true);
+  };
+
+  useEffect(() => {
+    if(Object.keys(errors).length === 0 && dataIsCorrect){
+      submitForm(true);
+    }
+  })
+  
 
   return (
     <Container >
@@ -23,24 +48,30 @@ function Login({ submitForm}) {
         <Col>
           <div>
             <br />
-            <Form className={` text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`}
-              onSubmit={handleSubmit} noValidate >
+            <Form className={` text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`}>
               <h3 className="mb-4" > Sign in </h3>
               <Form.Group>
-                <Form.Control type="username" placeholder="Username" className={` ml-5 ${styles.form_control}`}
-                  value={values.username}
-                  onChange={handleChange} />
+                <Form.Control type="username" placeholder="Username"  className={` ml-5 ${styles.form_control}`}
+                name="username"
+                 value={values.username}
+                 onChange={handleChange}
+                />
+                {errors.username && <p>{errors.username}</p>}
               </Form.Group>
               <Form.Group>
                 <Form.Control type="password" placeholder="Password" className={` ml-5 ${styles.form_control}`}
+                  name="password"
                   value={values.password}
-                  onChange={handleChange} />
+                  onChange={handleChange}
+                />
+                {errors.password && <p>{errors.password}</p>}
+                
               </Form.Group>
               <Form.Group className="d-flex justify-content-center mb-1">
                 <Form.Check label="Remember me" />
               </Form.Group>
               <div>
-                <Button type='submit' className={`btn ${styles.form_control} && ${styles.submit_btn}`} >Login</Button>
+                <Button type='submit' className={`btn ${styles.form_control} && ${styles.submit_btn}`} onClick={handleFormSubmit} >Login</Button>
               </div>
               <div>
                 <Form.Group>

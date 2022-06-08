@@ -1,28 +1,31 @@
-import React, { useState } from 'react';
+import React, {useState} from "react";
 import Register from './Register';
-import Login from './Login';
-import Home from '../Home';
+import CreateList from "../CreateList";
 
-const Form = () => {
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
-    function submitForm() {
-        setIsSubmitted(true);
-    }
+
+function Form() {
+
+    const [formIsSubmitted, setFormIsSubmitted] = useState(false)
+    const submitForm = () => {
+        setFormIsSubmitted(true);
+    };
+
     return ( 
-        <>
-        <div > {!isSubmitted ? ( 
-            <>
-                <Register submitForm = { submitForm }/> 
-                <Login submitForm = { submitForm }/> 
-                </>
-            ) : ( 
-            <Home />
-            )
-        } 
-        </div> 
-        </>
-    );
-};
+        <div >
+         {!formIsSubmitted ?
+         ( <Register submitForm={submitForm}/>
+          
+         ):(
+             <CreateList/>
+          )};
 
-export default Form;
+         
+
+        </div>
+
+
+    )
+}
+
+export default Form
