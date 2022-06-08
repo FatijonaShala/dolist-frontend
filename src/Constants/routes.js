@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Home from '../Pages/Home/';
 import CreateList from '../Pages/CreateList';
 import MyCollections from '../Pages/MyCollections';
@@ -7,11 +7,12 @@ import Profile from '../Pages/Profile/';
 import About from '../Pages/About';
 import Login from '../Pages/Auth/Login';
 import Register from '../Pages/Auth/Register';
-import FormSuccess from '../Pages/Auth/FormSucces';
 
-   
+
+
 
 const routes = [
+
     { path: "/", Component: < Home /> , private: false },
     { path: "/login", Component: < Login /> , private: false },
     { path: "/register", Component: < Register /> , private: false },
@@ -20,6 +21,7 @@ const routes = [
     { path: "/analytics", Component: < Analytics /> , private: false },
     { path: "/profile", Component: < Profile /> , private: false },
     { path: "/about", Component: < About /> , private: false }
+
 
 ];
 

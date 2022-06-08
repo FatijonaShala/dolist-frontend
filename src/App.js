@@ -3,7 +3,9 @@ import './Styles/App.scss';
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import routes from './Constants/routes';
-import Form from './Pages/Auth/Form';
+
+
+
 
 
 function App() {
@@ -13,13 +15,16 @@ function App() {
         private = { route.private }
         />)
 
-        return ( <
-            div className = "App">
-            
-            <Router> 
-            <Routes>  { listRoutes } 
-            </Routes> 
-            </Router>  
+        return ( 
+            <div className = "App" >
+
+
+            <Router>
+            <Routes > 
+              
+                { listRoutes } 
+            </Routes>   
+            </Router>    
             </div>
         );
     }
