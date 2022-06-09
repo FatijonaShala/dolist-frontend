@@ -3,6 +3,7 @@ import styles from '../Form.module.scss';
 import {Form, Container, Row, Col, Button, Image } from 'react-bootstrap';
 import LayoutWrapper from '../../../hoc/Layout';
 import validate from "./validation";
+import { useNavigate} from 'react-router-dom';
 
 
 function Login() {
@@ -15,6 +16,7 @@ function Login() {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
   
 
 
@@ -31,6 +33,7 @@ function Login() {
     setIsSubmitting(true);
     if (Object.keys(errors).length === 0 && isSubmitting) {
       console.log(values);
+      navigate("/newList")
      
     }
     else {
