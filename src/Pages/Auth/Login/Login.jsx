@@ -1,40 +1,44 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import styles from '../Form.module.scss';
 import {Form, Container, Row, Col, Button, Image } from 'react-bootstrap';
 import LayoutWrapper from '../../../hoc/Layout';
-import validation from "./validation";
+import validate from "./validation";
 
 
-function Login({ submitForm }) {
+function Login() {
+  
   const [values, setValues] = useState({
-    email: "",
     username: "",
     password: "",
-    password2: ""
+  
   });
 
   const [errors, setErrors] = useState({});
-  const [dataIsCorrect, setDataIsCorrect] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+
 
   const handleChange = (e) =>{
     setValues({
       ...values,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     })
   };
 
 
-  const handleFormSubmit = (e) =>{
+  const handleSubmit = (e) =>{
     e.preventDefault();
-    setErrors(validation(values));
-    setDataIsCorrect(true);
-  };
-
-  useEffect(() => {
-    if(Object.keys(errors).length === 0 && dataIsCorrect){
-      submitForm(true);
+    setIsSubmitting(true);
+    if (Object.keys(errors).length === 0 && isSubmitting) {
+      console.log(values);
+     
     }
-  })
+    else {
+
+  setErrors(validate(values));
+  }
+  
+  };
   
 
   return (
@@ -48,7 +52,7 @@ function Login({ submitForm }) {
         <Col>
           <div>
             <br />
-            <Form className={` text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`}>
+            <Form className={` text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`} onSubmit={handleSubmit} >
               <h3 className="mb-4" > Sign in </h3>
               <Form.Group>
                 <Form.Control type="username" placeholder="Username"  className={` ml-5 ${styles.form_control}`}
@@ -67,11 +71,11 @@ function Login({ submitForm }) {
                 {errors.password && <p>{errors.password}</p>}
                 
               </Form.Group>
-              <Form.Group className="d-flex justify-content-center mb-1">
+              {/* <Form.Group className="d-flex justify-content-center mb-1">
                 <Form.Check label="Remember me" />
-              </Form.Group>
+              </Form.Group> */}
               <div>
-                <Button type='submit' className={`btn ${styles.form_control} && ${styles.submit_btn}`} onClick={handleFormSubmit} >Login</Button>
+                <Button type='submit' className={`btn ${styles.form_control} && ${styles.submit_btn}`} >Login</Button>
               </div>
               <div>
                 <Form.Group>

@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from '../Form.module.scss';
 import { Form, Container, Row, Col, Button, Image } from 'react-bootstrap';
 import LayoutWrapper from '../../../hoc/Layout';
-import validation from './validation';
+import validate from "./validation";
+import { useNavigate} from 'react-router-dom';
 
 
-function Register({submitForm}) {
+function Register() {
 
   const [values, setValues] = useState({
     email: "",
@@ -15,27 +16,37 @@ function Register({submitForm}) {
   });
 
   const [errors, setErrors] = useState({});
-  const [dataIsCorrect, setDataIsCorrect] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+  
+
 
   const handleChange = (e) =>{
     setValues({
       ...values,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     })
   };
 
 
-  const handleFormSubmit = (e) =>{
+  const handleSubmit = (e) =>{
     e.preventDefault();
-    setErrors(validation(values));
-    setDataIsCorrect(true);
+    setIsSubmitting(true);
+    
+
+    if (Object.keys(errors).length === 0 && isSubmitting) {
+      console.log(values);
+      navigate("/newList")
+    }
+   else {
+
+    setErrors(validate(values));
+   }
+  
   };
 
-  useEffect(() => {
-    if(Object.keys(errors).length === 0 && dataIsCorrect){
-      submitForm(true);
-    }
-  })
+
+  
 
   return (
     <Container >
@@ -48,7 +59,7 @@ function Register({submitForm}) {
         <Col>
           <div>
             <br />
-            <Form className={` form text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`}>
+            <Form className={` form text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`} onSubmit={handleSubmit}>
               <h3 className="mb-4" > Sign in </h3>
               <Row>
                 <Form.Group className="col-12">
@@ -96,12 +107,12 @@ function Register({submitForm}) {
 
                 </Form.Group>
 
-                <Form.Group className="d-flex justify-content-center mb-1">
-                  <Form.Check label="I agree with the Terms and Conditions and Privacy Policy" />
-                </Form.Group>
+                
                 <div>
-                  <Button type='submit' className={`btn ${styles.form_control} && ${styles.submit_btn}`} onClick={handleFormSubmit}>Login</Button>
+                  <Button type='submit' className={`btn ${styles.form_control} && ${styles.submit_btn}`} >Login</Button>
                 </div>
+            
+
                 <div>
                   <Form.Group>
                     <span className="mr-2">Have an account? <a href="/login">Sign in now</a></span>
