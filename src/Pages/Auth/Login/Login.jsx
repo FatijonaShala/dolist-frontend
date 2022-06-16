@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../Form.module.scss";
 import { Form, Container, Row, Col, Button, Image } from "react-bootstrap";
 import LayoutWrapper from "../../../hoc/Layout";
@@ -15,6 +15,7 @@ function Login() {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
+    e.persist();
     setValues({
       ...values,
       [e.target.name]: e.target.value,
@@ -22,14 +23,20 @@ function Login() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (Object.keys(errors).length === 0) {
-      console.log(values);
-      navigate("/newList");
-    } else {
-      setErrors(validate(values));
-    }
+    if (e) e.preventDefault();
+    setErrors(validate(values));
+    console.log(values);
   };
+
+  // if (Object.keys(errors).length === 0) {
+  //   console.log(values);
+  //
+  // }
+  // useEffect(() => {
+  //   if (Object.keys(errors).length === 0) {
+  //     callback();
+  //   }
+  // }, [errors]);
 
   return (
     <Container>

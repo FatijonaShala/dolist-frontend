@@ -1,7 +1,7 @@
-export default function validateInfo(values) {
+function validate(values) {
     let errors = {};
 
-    if (!values.username.trim()) {
+    if (!values.username) {
         errors.username = 'Username required';
     }
 
@@ -14,3 +14,5 @@ export default function validateInfo(values) {
 
     return errors;
 }
+
+export default validate;

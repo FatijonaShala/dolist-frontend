@@ -1,28 +1,26 @@
 import React from "react";
 import "./Styles/App.scss";
 import "bootstrap/dist/css/bootstrap.css";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import routes from "./Constants/routes";
-import Views from "./Constants/views";
+// import Views from "./Constants/views";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import routes from "./Constants/routes";
 
 function App() {
-  // const listRoutes = routes.map((route, index) => (
-  //   <Route
-  //     key={index}
-  //     path={route.path}
-  //     element={route.Component}
-  //     private={route.private}
-  //   />
-  // ));
+  const listRoutes = routes.map((route, index) => (
+    <Route
+      key={index}
+      path={route.path}
+      element={route.Component}
+      private={route.private}
+    />
+  ));
 
   return (
     <div className="App">
-      <Views />
-      {/* <Router>
-        <Routes>
-           {listRoutes}       
-        </Routes>
-      </Router>   */}
+      {/* <Views /> */}
+      <Router>
+        <Routes> {listRoutes}</Routes>
+      </Router>
     </div>
   );
 }

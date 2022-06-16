@@ -23,14 +23,24 @@ function Register() {
     });
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setErrors(validate(values));
+
+  //   if (Object.keys(errors).length === 0) {
+  //     console.log(values);
+  //     navigate("/newList");
+  //   }
+  // };
+
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
+    setErrors(validate(values));
+    //console.log(values);
 
     if (Object.keys(errors).length === 0) {
       console.log(values);
       navigate("/newList");
-    } else {
-      setErrors(validate(values));
     }
   };
 
@@ -54,7 +64,7 @@ function Register() {
               className={` form text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`}
               onSubmit={handleSubmit}
             >
-              <h3 className="mb-4"> Sign in </h3>
+              <h3 className="mb-4"> Sign up</h3>
               <Row>
                 <Form.Group className="col-12">
                   <Form.Control
@@ -109,7 +119,7 @@ function Register() {
                     type="submit"
                     className={`btn ${styles.form_control} && ${styles.submit_btn}`}
                   >
-                    Login
+                    Register
                   </Button>
                 </div>
 
