@@ -25,18 +25,14 @@ function Login() {
   const handleSubmit = (e) => {
     if (e) e.preventDefault();
     setErrors(validate(values));
-    console.log(values);
-  };
+    //console.log(values);
+    const validation = validate(values);
 
-  // if (Object.keys(errors).length === 0) {
-  //   console.log(values);
-  //
-  // }
-  // useEffect(() => {
-  //   if (Object.keys(errors).length === 0) {
-  //     callback();
-  //   }
-  // }, [errors]);
+    if (Object.keys(validation).length === 0) {
+      console.log(values);
+      navigate("/newList");
+    }
+  };
 
   return (
     <Container>

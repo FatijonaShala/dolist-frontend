@@ -37,8 +37,9 @@ function Register() {
     if (e) e.preventDefault();
     setErrors(validate(values));
     //console.log(values);
+    const validation = validate(values);
 
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(validation).length === 0) {
       console.log(values);
       navigate("/newList");
     }
