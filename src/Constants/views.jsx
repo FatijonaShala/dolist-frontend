@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import ProtectedRoutes from "./ProtectedRoutes";
 import React from "react";
-import Home from "../Pages/Home/";
+import Home from "../Pages/Home";
 import CreateList from "../Pages/CreateList";
 import MyCollections from "../Pages/MyCollections";
 import Analytics from "../Pages/Analytics";
-import Profile from "../Pages/Profile/";
+import Profile from "../Pages/Profile";
 import About from "../Pages/About";
 import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";

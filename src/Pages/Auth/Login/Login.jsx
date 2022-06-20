@@ -77,9 +77,7 @@ function Login() {
                 />
                 {errors.password && <p>{errors.password}</p>}
               </Form.Group>
-              {/* <Form.Group className="d-flex justify-content-center mb-1">
-                <Form.Check label="Remember me" />
-              </Form.Group> */}
+
               <div>
                 <Button
                   type="submit"
