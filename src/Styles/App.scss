@@ -25,14 +25,14 @@ $link-font-size: 16px;
 
 body {
     font-family: $font-base;
-    padding-top: 70px;
+    padding-top: 0px;
 }
 
 .full-screen {
-    padding: 8rem 0;
+    padding: 5rem 0;
 }
 
-.small_text {
+.small-text {
     color: $body-font-color;
     font-size: $small-font-size;
     font-weight: $font-weight-bold;
@@ -106,7 +106,7 @@ strong {
 }
 
 // CUSTOM BUTTON
-.custom_btn {
+.custom-btn {
     color: $body-font-color;
     font-weight: $font-weight-bold;
     border-radius: 50px;
@@ -118,7 +118,7 @@ strong {
     &:hover {
         color: $main-color;
     }
-    &.custom_btn_bg {
+    &.custom-btn-bg {
         background: $button-color;
         color: $text-white;
         &:hover {
@@ -133,7 +133,7 @@ strong {
     position: relative;
 }
 
-.animated_info {
+.animated-info {
     display: inline-block;
     vertical-align: top;
     margin-top: 10px;
@@ -141,11 +141,11 @@ strong {
     position: relative;
 }
 
-.animated_item {
+.animated-item {
     color: $main-color;
 }
 
-.animated_item {
+.animated-item {
     font-size: 32px;
     line-height: inherit;
     display: block;
@@ -422,69 +422,6 @@ strong {
         display: inline-block;
         vertical-align: middle;
         margin-left: 15px;
-    }
-}
-
-// OWL CAROUSEL
-.owl-carousel {
-    .owl-nav {
-        span {
-            display: none;
-        }
-        .owl-prev,
-        .owl-next {
-            &:before {
-                background: none;
-                padding: 0;
-                display: block;
-                position: absolute;
-                top: 50%;
-                transform: translate(0, -50%);
-                font-family: 'unicons';
-                font-size: 100px;
-                line-height: normal;
-            }
-        }
-        .owl-prev {
-            &:before {
-                content: '\e833';
-                left: -45px;
-            }
-        }
-        .owl-next {
-            &:before {
-                content: '\e836';
-                right: -45px;
-            }
-        }
-    }
-}
-
-.owl-theme {
-    .owl-nav [class*=owl-] {
-        background: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
-        font-size: inherit;
-        &:hover {
-            color: $main-color;
-        }
-    }
-    .owl-dots {
-        .owl-dot {
-            outline: none;
-            span {
-                width: 8px;
-                height: 8px;
-            }
-            &.active,
-            &:hover {
-                span {
-                    background: $body-font-color;
-                }
-            }
-        }
     }
 }
 
