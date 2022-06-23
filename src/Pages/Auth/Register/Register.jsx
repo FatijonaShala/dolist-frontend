@@ -23,20 +23,10 @@ function Register() {
     });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setErrors(validate(values));
-
-  //   if (Object.keys(errors).length === 0) {
-  //     console.log(values);
-  //     navigate("/newList");
-  //   }
-  // };
-
   const handleSubmit = (e) => {
     if (e) e.preventDefault();
     setErrors(validate(values));
-    //console.log(values);
+
     const validation = validate(values);
 
     if (Object.keys(validation).length === 0) {
@@ -52,7 +42,7 @@ function Register() {
           <div>
             <Image
               src="../img/about1.png"
-              className="w-5 ml-5 mt-1 pt-1"
+              className="w-5 ml-5 mt-1 pt-1 "
               thumbnail
               style={{ border: "none" }}
             />

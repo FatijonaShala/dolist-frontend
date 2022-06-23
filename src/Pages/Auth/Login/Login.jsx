@@ -41,7 +41,7 @@ function Login() {
           <div>
             <Image
               src="../img/about1.png"
-              className="w-5 ml-5 mt-1 pt-1"
+              className="w-5 ml-5 mt-1 pt-1 about-image png"
               thumbnail
               style={{ border: "none" }}
             />
@@ -51,7 +51,7 @@ function Login() {
           <div>
             <br />
             <Form
-              className={` text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`}
+              className={` text-center w-1 ml-1 mt-5 pt-5  ${styles.contact_form}`}
               onSubmit={handleSubmit}
             >
               <h3 className="mb-4"> Sign in </h3>

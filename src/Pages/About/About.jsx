@@ -15,10 +15,9 @@ function About() {
         <Container>
           <Row>
             <div className="col-lg-6 col-12">
-              <div className={style.timeline}>
-                <div className={style.timeline_wrapper}>
-                  <div className={style.timeline_info}>
-                    {/* <h3><span>What we do</span></h3> */}
+              <div className="timeline">
+                <div className="timeline-wrapper">
+                  <div className="timeline-info">
                     <h2 className="mb-4">About Us</h2>
                     <p>
                       In the beginning, there was no DoList. No company. No
@@ -41,8 +40,9 @@ function About() {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-6 col-12">
-              <div className={`${style.about_image} && png`}>
+              <div className="about-image png">
                 <img src="../img/bg2.png" className="img-fluid" alt="svg" />
               </div>
             </div>
@@ -55,7 +55,7 @@ function About() {
           <Row>
             <div className="col-lg-5 mr-lg-5 col-12">
               <div className="google-map w-100">
-                <div className={`${style.about_image} && png`}>
+                <div className="about-image png">
                   <img
                     src="../img/about1.png"
                     className="img-fluid"
@@ -66,14 +66,14 @@ function About() {
             </div>
 
             <div className="col-lg-6 col-12">
-              <div className={` ${style.contact_form}`}>
+              <div className="contact-form">
                 <h2 className="mb-4">Contact Us</h2>
                 <Form>
                   <Row>
                     <div className="col-lg-6 col-12">
                       <Form.Control
                         type="text"
-                        className={style.form_control}
+                        className="form-control"
                         name="name"
                         placeholder="Your Name"
                         id="name"
@@ -83,7 +83,7 @@ function About() {
                     <div className="col-lg-6 col-12">
                       <Form.Control
                         type="email"
-                        className={style.form_control}
+                        className="form-control"
                         name="email"
                         placeholder="Email"
                         id="email"
@@ -94,7 +94,7 @@ function About() {
                       <textarea
                         name="message"
                         rows="6"
-                        className={style.form_control}
+                        className="form-control"
                         id="message"
                         placeholder="Message"
                       ></textarea>
@@ -103,7 +103,7 @@ function About() {
                     <div className="ml-lg-auto col-lg-5 col-12">
                       <Form.Control
                         type="submit"
-                        className={`${style.form_control} && ${style.submit_btn}`}
+                        className="form-control submit-btn"
                         value="Send Message"
                       />
                     </div>

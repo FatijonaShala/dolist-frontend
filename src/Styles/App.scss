@@ -25,11 +25,11 @@ $link-font-size: 16px;
 
 body {
     font-family: $font-base;
-    padding-top: 0px;
+    padding-top: 70px;
 }
 
 .full-screen {
-    padding: 5rem 0;
+    padding: 8rem 0;
 }
 
 .small-text {
@@ -304,19 +304,19 @@ strong {
 }
 
 // COPYRIGHT TEXT
-.copyright_text {
+.copyright-text {
     font-size: 16px;
     font-weight: $font-weight-normal;
     display: block;
 }
 
 // COLOR MODE
-.color_mode {
+.color-mode {
     font-weight: $font-weight-bold;
     cursor: pointer;
 }
 
-.color_mode_icon {
+.color-mode-icon {
     position: relative;
     right: 6px;
     &:after {
@@ -350,7 +350,7 @@ strong {
             border-bottom: 1px solid #1f1f1f;
         }
     }
-    .small_text {
+    .small-text {
         background: #0d0c15;
         color: $text-white;
     }
@@ -362,7 +362,7 @@ strong {
     h4,
     h5,
     h6,
-    .color_mode {
+    .color-mode {
         color: $text-white;
     }
     .owl-carousel {
@@ -425,10 +425,80 @@ strong {
     }
 }
 
+// OWL CAROUSEL
+.owl-carousel {
+    .owl-nav {
+        span {
+            display: none;
+        }
+        .owl-prev,
+        .owl-next {
+            &:before {
+                background: none;
+                padding: 0;
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                font-family: 'unicons';
+                font-size: 100px;
+                line-height: normal;
+            }
+        }
+        .owl-prev {
+            &:before {
+                content: '\e833';
+                left: -45px;
+            }
+        }
+        .owl-next {
+            &:before {
+                content: '\e836';
+                right: -45px;
+            }
+        }
+    }
+}
+
+.owl-theme {
+    .owl-nav [class*=owl-] {
+        background: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    .owl-dots {
+        .owl-dot {
+            outline: none;
+            span {
+                width: 8px;
+                height: 8px;
+            }
+            &.active,
+            &:hover {
+                span {
+                    background: $body-font-color;
+                }
+            }
+        }
+    }
+}
+
+// GOOGLE MAP
+.google-map {
+    iframe {
+        width: 100%;
+    }
+}
+
 // CONTACT FORM
-.contact_form {
+.contact-form {
     position: relative;
-    .form_control {
+    .form-control {
         background: transparent;
         border-radius: 2px;
         outline: none;
@@ -443,7 +513,7 @@ strong {
             border-color: $main-color;
         }
     }
-    .submit_btn {
+    .submit-btn {
         background: $main-color;
         border-radius: 50px;
         color: $text-white;
@@ -457,7 +527,7 @@ strong {
     }
 }
 
-.contact_info {
+.contact-info {
     background: $button-color;
     border-radius: 0 0 3px 3px;
     position: relative;
@@ -469,7 +539,7 @@ strong {
 }
 
 // SOCIAL LINKS
-.social_links {
+.social-links {
     .uil {
         color: #f7f3f3;
         font-size: 20px;
@@ -498,14 +568,14 @@ strong {
     .color-mode {
         display: none;
     }
-    .about_image {
+    .about-image {
         margin-top: 4em;
     }
     .mobile-mt-2,
     .contact-form {
         margin-top: 2em;
     }
-    .contact_info {
+    .contact-info {
         padding: 0 2rem;
     }
 }
@@ -517,7 +587,7 @@ strong {
     h2 {
         font-size: 2em;
     }
-    .animated_item {
+    .animated-item {
         font-size: 28px;
     }
     .navbar-collapse {
@@ -531,13 +601,13 @@ strong {
 }
 
 @media (max-width: 580px) {
-    .animated_item {
+    .animated-item {
         font-size: 24px;
     }
-    .custom_btn_group {
+    .custom-btn-group {
         text-align: center;
     }
-    .custom_btn {
+    .custom-btn {
         display: block;
         margin: 10px 0;
     }
@@ -551,22 +621,22 @@ strong {
 }
 
 @media (max-width: 320px) {
-    .animated_text {
+    .animated-text {
         margin-top: 0;
     }
-    .about_text {
+    .about-text {
         text-align: center;
     }
-    .full_screen {
+    .full-screen {
         padding: 4rem 0;
     }
-    .mobile_block {
+    .mobile-block {
         display: block;
     }
-    .contact_info {
+    .contact-info {
         flex-direction: column;
     }
-    .social_links {
+    .social-links {
         li {
             display: inline-block;
             vertical-align: top;
