@@ -3,14 +3,18 @@ import { Navbar, Nav, Container, NavDropdown, Image } from "react-bootstrap";
 import Navstyle from "./navbar.module.scss";
 import Moon from "@iconscout/react-unicons/icons/uil-moon";
 import User from "@iconscout/react-unicons/icons/uil-user";
+import ColorMode from "./ThemeChangeButton";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Menu = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="white"
-      className={`${Navstyle.nav} && navbar-expand-sm && navbar-light`}
+      className={`nav navbar-expand-sm navbar-light`}
     >
       <Container>
         <Navbar.Brand href="/">DoList </Navbar.Brand>
@@ -33,6 +37,7 @@ const Menu = () => {
               href="/profile"
             >
               <Nav.Link href="/profile"> Account </Nav.Link>
+              <Nav.Link href="/logout"> Log out </Nav.Link>
               <Nav.Link href="/"> </Nav.Link>
             </NavDropdown>
           </Nav>
@@ -44,7 +49,7 @@ const Menu = () => {
                   className={` ${Navstyle.color_mode} d-lg-flex justify-content-center align-items-center`}
                 >
                   <i>
-                    <Moon className={Navstyle.color_mode_icon} />
+                    <ColorMode />
                   </i>
                 </div>
               </div>
