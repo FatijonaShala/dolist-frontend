@@ -25,7 +25,7 @@ $link-font-size: 16px;
 
 body {
     font-family: $font-base;
-    padding-top: 70px;
+    padding-top: 0px;
 }
 
 .full-screen {
@@ -422,69 +422,6 @@ strong {
         display: inline-block;
         vertical-align: middle;
         margin-left: 15px;
-    }
-}
-
-// OWL CAROUSEL
-.owl-carousel {
-    .owl-nav {
-        span {
-            display: none;
-        }
-        .owl-prev,
-        .owl-next {
-            &:before {
-                background: none;
-                padding: 0;
-                display: block;
-                position: absolute;
-                top: 50%;
-                transform: translate(0, -50%);
-                font-family: 'unicons';
-                font-size: 100px;
-                line-height: normal;
-            }
-        }
-        .owl-prev {
-            &:before {
-                content: '\e833';
-                left: -45px;
-            }
-        }
-        .owl-next {
-            &:before {
-                content: '\e836';
-                right: -45px;
-            }
-        }
-    }
-}
-
-.owl-theme {
-    .owl-nav [class*=owl-] {
-        background: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
-        font-size: inherit;
-        &:hover {
-            color: $main-color;
-        }
-    }
-    .owl-dots {
-        .owl-dot {
-            outline: none;
-            span {
-                width: 8px;
-                height: 8px;
-            }
-            &.active,
-            &:hover {
-                span {
-                    background: $body-font-color;
-                }
-            }
-        }
     }
 }
 

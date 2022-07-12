@@ -1,15 +1,10 @@
 import React from "react";
 import { Navbar, Nav, Container, NavDropdown, Image } from "react-bootstrap";
 import Navstyle from "./navbar.module.scss";
-import Moon from "@iconscout/react-unicons/icons/uil-moon";
 import User from "@iconscout/react-unicons/icons/uil-user";
 import ColorMode from "./ThemeChangeButton";
-import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
 
 const Menu = () => {
-  const theme = useContext(ThemeContext);
-  const darkMode = theme.state.darkMode;
   return (
     <Navbar
       collapseOnSelect

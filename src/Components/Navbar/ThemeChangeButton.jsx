@@ -1,19 +1,27 @@
 import Moon from "@iconscout/react-unicons/icons/uil-moon";
 import Sun from "@iconscout/react-unicons/icons/uil-sun";
-import React, { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-import "../../App";
+import React from "react";
+import { ThemeContext, themes } from "../../context/ThemeContext";
 
-function ThemeChangeButton(props) {
-  const theme = useContext(ThemeContext);
-  const darkMode = theme.state.darkMode;
+function ThemeChangeButton() {
+  const [darkMode, setDarkMode] = React.useState(true);
 
-  const onClick = () => {
-    if (darkMode) theme.dispatch({ type: "LIGHTMODE" });
-    else theme.dispatch({ type: "DARKMODE" });
-  };
-
-  return <div onClick={onClick}>{darkMode ? <Sun /> : <Moon />}</div>;
+  return (
+    <div>
+      <ThemeContext.Consumer>
+        {({ changeTheme }) => (
+          <div
+            onClick={() => {
+              setDarkMode(!darkMode);
+              changeTheme(darkMode ? themes.light : themes.dark);
+            }}
+          >
+            {darkMode ? <Sun /> : <Moon />}
+          </div>
+        )}
+      </ThemeContext.Consumer>
+    </div>
+  );
 }
 
 export default ThemeChangeButton;

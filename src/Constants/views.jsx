@@ -8,6 +8,7 @@ import Analytics from "../Pages/Analytics";
 import Profile from "../Pages/Profile";
 import About from "../Pages/About";
 import Login from "../Pages/Auth/Login";
+import Logout from "../Pages/Auth/Logout";
 import Register from "../Pages/Auth/Register";
 import { BrowserRouter } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const Views = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
 

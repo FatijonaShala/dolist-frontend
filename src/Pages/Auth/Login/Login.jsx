@@ -25,7 +25,7 @@ function Login() {
   const handleSubmit = (e) => {
     if (e) e.preventDefault();
     setErrors(validate(values));
-    //console.log(values);
+
     const validation = validate(values);
 
     if (Object.keys(validation).length === 0) {

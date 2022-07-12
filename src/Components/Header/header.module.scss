@@ -24,6 +24,25 @@
     color: #ffffff !important;
 }
 
+//dark-mode
+.custom_btn_dark {
+    background: #ffc200;
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 13px 79px;
+    font-size: 19px;
+    line-height: normal;
+    overflow: hidden;
+}
+
+.custom_btn_dark:hover {
+    color: #5b5b5b;
+}
+
 .animated {
     position: relative;
 }

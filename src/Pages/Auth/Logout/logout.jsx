@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../Form.module.scss";
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import LayoutWrapper from "../../../hoc/Layout";
+import Login from "../Login";
 
 function logout() {
   return (
@@ -19,13 +20,15 @@ function logout() {
             </div>
           </Col>
           <Col>
-            <div>
-              <br />
+            <div className="text-center w-1 ml-5 mt-5 pt-5">
+              <h1 className="mb-1"> Sign in </h1>
+              <span className="mr-2">
+                Don't have an account? <a href="/register">Sign up now</a>
+              </span>
             </div>
           </Col>
         </Row>
-      </Container>{" "}
-      <div>logout</div>
+      </Container>
     </div>
   );
 }

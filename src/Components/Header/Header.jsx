@@ -1,9 +1,15 @@
-import React, { useState } from "react";
-import { section, Button, Container, Row } from "react-bootstrap";
+import React, { useState, useContext } from "react";
+import { Container, Row } from "react-bootstrap";
+import { ThemeContext, themes } from "../../context/ThemeContext";
 import style from "./header.module.scss";
 
-function Header() {
+function Header(props) {
   const [items] = useState(["organize", "progress", "focus"]);
+
+  const themes = useContext(ThemeContext);
+
+  const darkMode = themes.dark;
+
   return (
     <section
       className="about full-screen d-lg-flex justify-content-center align-items-center"
@@ -17,7 +23,7 @@ function Header() {
                 To do lists{" "}
                 <span className="mobile-block"> for busy people!</span>
               </small>
-              <h1 className={`${style.animated} ${style.animated_text}`}>
+              <h1 className={`${style.animated}  animated-text`}>
                 <span className="mr-2"> we help you to </span>
                 <div className={style.animated_info}>
                   {items &&
@@ -26,10 +32,14 @@ function Header() {
                     ))}
                 </div>
               </h1>
-              <div className={` ${style.custom_btn_group} && mt-4`}>
+              <div className={`  ${style.custom_btn_group} && mt-4`}>
                 <a
                   href="login"
-                  className={`btn ${style.custom_btn} && ${style.custom_btn_bg}  && ${style.custom_btn_link}`}
+                  className={`btn  ${
+                    darkMode
+                      ? `${style.custom_btn_dark}`
+                      : ` ${style.custom_btn}`
+                  } ${style.custom_btn_bg}  ${style.custom_btn_link}`}
                 >
                   Create your list
                 </a>
