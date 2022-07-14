@@ -40,7 +40,7 @@ function Register() {
       <Row>
         <Col>
           <div>
-            <Image
+            <img
               src="../img/about1.png"
               className="w-5 ml-5 mt-1 pt-1 "
               thumbnail

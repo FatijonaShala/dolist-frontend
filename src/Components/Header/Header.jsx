@@ -1,13 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import { ThemeContext, themes } from "../../context/ThemeContext";
 import style from "./header.module.scss";
 
-function Header(props) {
+function Header() {
   const [items] = useState(["organize", "progress", "focus"]);
-
-  //const [darkMode] = React.useState(true);
-  const darkMode = useContext(ThemeContext);
 
   return (
     <section
@@ -22,7 +18,7 @@ function Header(props) {
                 To do lists{" "}
                 <span className="mobile-block"> for busy people!</span>
               </small>
-              <h1 className={`${style.animated}  animated-text`}>
+              <h1 className="animated animated-text">
                 <span className="mr-2"> we help you to </span>
                 <div className={style.animated_info}>
                   {items &&
@@ -31,6 +27,7 @@ function Header(props) {
                     ))}
                 </div>
               </h1>
+
               <div className={`  ${style.custom_btn_group} && mt-4`}>
                 <a
                   href="login"
@@ -44,7 +41,6 @@ function Header(props) {
               </div>
             </div>
           </div>
-
           <div className="col-lg-5 col-md-12 col-12">
             <div className="about_image svg">
               <img src="../img/header.svg" className="img-fluid" alt="svg" />
