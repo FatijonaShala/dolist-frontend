@@ -103,7 +103,7 @@ function About() {
                     <div className="ml-lg-auto col-lg-5 col-12">
                       <Form.Control
                         type="submit"
-                        className="form-control submit-btn"
+                        className="btn form-control submit-btn"
                         value="Send Message"
                       />
                     </div>

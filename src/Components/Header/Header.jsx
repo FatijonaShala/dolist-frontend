@@ -6,9 +6,8 @@ import style from "./header.module.scss";
 function Header(props) {
   const [items] = useState(["organize", "progress", "focus"]);
 
-  const themes = useContext(ThemeContext);
-
-  const darkMode = themes.dark;
+  //const [darkMode] = React.useState(true);
+  const darkMode = useContext(ThemeContext);
 
   return (
     <section
@@ -35,11 +34,10 @@ function Header(props) {
               <div className={`  ${style.custom_btn_group} && mt-4`}>
                 <a
                   href="login"
-                  className={`btn  ${
-                    darkMode
-                      ? `${style.custom_btn_dark}`
-                      : ` ${style.custom_btn}`
-                  } ${style.custom_btn_bg}  ${style.custom_btn_link}`}
+                  className={`btn 
+                    
+                         ${style.custom_btn}
+                     ${style.custom_btn_bg}  ${style.custom_btn_link}`}
                 >
                   Create your list
                 </a>

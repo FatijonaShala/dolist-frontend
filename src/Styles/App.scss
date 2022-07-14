@@ -16,7 +16,7 @@ $text-white: #ffffff;
 $dark-mode-color: #0c0c0d;
 $main-color: #ffc200;
 $border-color: #f2f2f1;
-$button-color: #474559;
+$button-color: #ffc200;
 $small-font-size: 14px;
 $link-font-size: 16px;
 @mixin transition-effect {
@@ -336,42 +336,84 @@ strong {
     }
 }
 
+// .dark-mode {
+//     background: $dark-mode-color;
+//     .navbar-light .navbar-nav .nav-link {
+//         color: rgba(255, 255, 255, 0.8);
+//         &:hover {
+//             color: $main-color;
+//         }
+//     }
+//     .navbar {
+//         &[class*="headroom--not-top"] {
+//             background: $dark-mode-color;
+//             border-bottom: 1px solid #1f1f1f;
+//         }
+//     }
+//     .small-text {
+//         background: #0d0c15;
+//         color: $text-white;
+//     }
+//     .feature-card .uil,
+//     .navbar-light .navbar-brand,
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6,
+//     .color-mode {
+//         color: $text-white;
+//     }
+//     .owl-carousel {
+//         .owl-nav button.owl-next,
+//         .owl-nav button.owl-prev,
+//         button.owl-dot {
+//             color: $text-white;
+//         }
+//}
 .dark-mode {
-    background: $dark-mode-color;
-    .navbar-light .navbar-nav .nav-link {
-        color: rgba(255, 255, 255, 0.8);
-        &:hover {
-            color: $main-color;
-        }
-    }
-    .navbar {
-        &[class*="headroom--not-top"] {
-            background: $dark-mode-color;
-            border-bottom: 1px solid #1f1f1f;
-        }
-    }
-    .small-text {
-        background: #0d0c15;
-        color: $text-white;
-    }
-    .feature-card .uil,
-    .navbar-light .navbar-brand,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .color-mode {
-        color: $text-white;
-    }
-    .owl-carousel {
-        .owl-nav button.owl-next,
-        .owl-nav button.owl-prev,
-        button.owl-dot {
-            color: $text-white;
-        }
-    }
+    background: #0c0c0d;
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link:hover {
+    color: #ffc200;
+}
+
+.dark-mode .navbar[class*="headroom--not-top"] {
+    background: #0c0c0d;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.dark-mode .small-text {
+    background: #0d0c15;
+    color: #ffffff;
+}
+
+// .dark-mode .card-img-top .card-body .card-headline {
+//    // background-color: #1b4c65;
+//     //color: $body-font-color;
+// }
+.dark-mode .feature-card .uil,
+.dark-mode .navbar-light .navbar-brand,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode .color-mode {
+    color: #ffffff;
+}
+
+.dark-mode .owl-carousel .owl-nav button.owl-next,
+.dark-mode .owl-carousel .owl-nav button.owl-prev,
+.dark-mode .owl-carousel button.owl-dot {
+    color: #ffffff;
 }
 
 // TIMELINE
@@ -486,6 +528,121 @@ strong {
             color: $main-color;
         }
     }
+}
+
+//TO DO LIST styles
+.todo-nav {
+    margin-top: 40px
+}
+
+.todo-list {
+    margin: 10px 0
+}
+
+.todo-list .todo-item {
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 0;
+    background: #f7f7f7
+}
+
+.todo-list.only-active .todo-item.complete {
+    display: none
+}
+
+.todo-list.only-active .todo-item:not(.complete) {
+    display: block
+}
+
+.todo-list.only-complete .todo-item:not(.complete) {
+    display: none
+}
+
+.todo-list.only-complete .todo-item.complete {
+    display: block
+}
+
+.todo-list .todo-item.complete span {
+    text-decoration: line-through
+}
+
+.remove-todo-item {
+    color: #ccc;
+    visibility: hidden
+}
+
+.remove-todo-item:hover {
+    color: #5f5f5f
+}
+
+.todo-item:hover .remove-todo-item {
+    visibility: visible
+}
+
+div.checker {
+    width: 18px;
+    height: 18px
+}
+
+div.checker input,
+div.checker span {
+    width: 18px;
+    height: 18px
+}
+
+div.checker span {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 -260px;
+}
+
+div.checker,
+div.checker input,
+div.checker span {
+    width: 19px;
+    height: 19px;
+}
+
+div.checker,
+div.radio,
+div.uploader {
+    position: relative;
+}
+
+div.button,
+div.button *,
+div.checker,
+div.checker *,
+div.radio,
+div.radio *,
+div.selector,
+div.selector *,
+div.uploader,
+div.uploader * {
+    margin: 0;
+    padding: 0;
+}
+
+div.button,
+div.checker,
+div.radio,
+div.selector,
+div.uploader {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.card {
+    padding: 25px;
+    margin-bottom: 20px;
+    border: initial;
+    background: #fff;
+    border-radius: calc(.15rem - 1px);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
 }
 
 // RESPONSIVE STYLES
