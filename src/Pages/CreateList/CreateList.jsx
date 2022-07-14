@@ -51,17 +51,19 @@ function CreateList() {
     <>
       {" "}
       <Container className="resume py-5">
-        <Form
-          formInput={formInput}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
-        <Todo
-          tasks={tasks}
-          handleComplete={handleComplete}
-          handleRemove={handleRemove}
-          handleRemoveAll={handleRemoveAll}
-        />
+        <div className="todopart">
+          <Form
+            formInput={formInput}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+          />
+          <Todo
+            tasks={tasks}
+            handleComplete={handleComplete}
+            handleRemove={handleRemove}
+            handleRemoveAll={handleRemoveAll}
+          />
+        </div>
       </Container>
     </>
   );

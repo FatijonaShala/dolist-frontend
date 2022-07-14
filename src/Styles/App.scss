@@ -498,6 +498,11 @@ strong {
 }
 
 //TO DO LIST styles
+.todopart {
+    width: 500px;
+    ;
+}
+
 form {
     display: flex;
     justify-content: center;
@@ -666,7 +671,7 @@ i {
     top: 4px;
     width: 5px;
     height: 10px;
-    border: solid lightgreen;
+    border: solid #ffc200;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
