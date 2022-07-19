@@ -3,6 +3,7 @@ import LayoutWrapper from "../../hoc/Layout";
 import Form from "./Form";
 import Todo from "./Todo";
 import { Container } from "react-bootstrap";
+import CheckSquare from "@iconscout/react-unicons/icons/uil-check-square";
 
 function CreateList() {
   const [tasks, setTasks] = useState([]);
@@ -49,7 +50,6 @@ function CreateList() {
 
   return (
     <>
-      {" "}
       <Container className="resume py-5">
         <div className="todopart">
           <Form

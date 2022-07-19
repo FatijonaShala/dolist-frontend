@@ -1,8 +1,10 @@
 import React from "react";
 import Trash from "@iconscout/react-unicons/icons/uil-trash";
+import Pen from "@iconscout/react-unicons/icons/uil-pen";
 
 const Todo = (props) => {
-  const { tasks, handleComplete, handleRemove, handleRemoveAll } = props;
+  const { tasks, handleComplete, handleRemove, handleRemoveAll, handleChange } =
+    props;
 
   return (
     <ul className="todo">
@@ -13,25 +15,39 @@ const Todo = (props) => {
               <input type="checkbox" onClick={() => handleComplete(index)} />
               <span className="checkmark"></span>
             </label>
-            <span>{task.task}</span>
+            <span className="task-text">{task.task}</span>
           </div>
-          <button onClick={() => handleRemove(index)}>
-            <i>
-              {" "}
-              <Trash />
-              {/* className="fa-solid fa-trash-can" */}
-            </i>
-          </button>
+          <div className="btn-group">
+            <button
+              type="button"
+              className="btn btn-sm btn-outline-secondary btn-add"
+              onClick={() => handleChange(index)}
+            >
+              <i>
+                {" "}
+                <Pen />
+                {/* className="fa-solid fa-trash-can" */}
+              </i>
+            </button>
+            <button
+              type="button"
+              className="btn btn-sm btn-outline-secondary btn-add"
+              onClick={() => handleRemove(index)}
+            >
+              <i>
+                <Trash />
+              </i>
+            </button>
+          </div>
         </li>
       ))}
       {tasks.length > 1 && (
         <p>
           <button className="deleteAll" onClick={() => handleRemoveAll()}>
-            {/* <i className="fa-solid fa-eraser"></i> */}
             <i>
               <Trash />
-            </i>{" "}
-            Delete all
+            </i>
+            Delete All
           </button>
         </p>
       )}

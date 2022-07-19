@@ -36,7 +36,7 @@ function Register() {
   };
 
   return (
-    <Container>
+    <Container className="resume py-5 d-lg-flex justify-content-center align-items-center">
       <Row>
         <Col>
           <div>
@@ -49,13 +49,12 @@ function Register() {
           </div>
         </Col>
         <Col>
-          <div>
+          <div className="contact-form text-center ">
+            {" "}
+            <br /> <br />
             <br />
-            <Form
-              className={` form text-center w-1 ml-1 mt-5 pt-5 ${styles.contact_form}`}
-              onSubmit={handleSubmit}
-            >
-              <h3 className="mb-4"> Sign up</h3>
+            <h3 className="mb-4"> Sign up</h3>
+            <Form className={` ${styles.contact_form}`} onSubmit={handleSubmit}>
               <Row>
                 <Form.Group className="col-12">
                   <Form.Control

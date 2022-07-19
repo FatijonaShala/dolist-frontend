@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,700');
-// VARIABLES
+@import url('https:fonts.googleapis.com/css?family=Maven+Pro:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+//VARIABLES 
 $font-base: 'Maven Pro',
 sans-serif;
+$font-second: 'Comfortaa',
+cursive;
 $body-font-size: 18px;
 $h1-font-size: 2.8em;
 $h2-font-size: 2.4em;
@@ -25,7 +28,7 @@ $link-font-size: 16px;
 
 body {
     font-family: $font-base;
-    padding-top: 0px;
+    padding-top: 20px;
 }
 
 .full-screen {
@@ -60,12 +63,13 @@ a {
 }
 
 .navbar-brand {
+    font-family: $font-second;
     .uil {
         font-size: 40px;
     }
 }
 
-// TYPOGRAPHY
+//TYPOGRAPHY
 p {
     font-size: $body-font-size;
     font-weight: $font-weight-light;
@@ -105,7 +109,7 @@ strong {
     font-weight: $font-weight-bold;
 }
 
-// CUSTOM BUTTON
+//CUSTOM BUTTON 
 .custom-btn {
     color: $body-font-color;
     font-weight: $font-weight-bold;
@@ -128,7 +132,7 @@ strong {
     }
 }
 
-// ANIMATED TEXT
+//ANIMATED TEXT 
 .animated {
     position: relative;
 }
@@ -192,8 +196,7 @@ strong {
     }
 }
 
-// MENU
-.navbar {
+MENU .navbar {
     position: fixed;
     top: 0;
     right: 0;
@@ -209,7 +212,7 @@ strong {
     }
     &[class*="headroom--not-top"] {
         background: $text-white;
-        // box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
         border-bottom: 1px solid #f0f0f0;
         padding-top: 0;
         padding-bottom: 0;
@@ -258,8 +261,8 @@ strong {
     }
 }
 
-// HAMBURGER MENU
-.navbar-light {
+//HAMBURGER 
+MENU .navbar-light {
     .navbar-toggler-icon {
         background: none;
     }
@@ -303,14 +306,14 @@ strong {
     }
 }
 
-// COPYRIGHT TEXT
+//COPYRIGHT TEXT 
 .copyright-text {
     font-size: 16px;
     font-weight: $font-weight-normal;
     display: block;
 }
 
-// COLOR MODE
+//COLOR MODE
 .color-mode {
     font-weight: $font-weight-bold;
     cursor: pointer;
@@ -337,7 +340,7 @@ strong {
 }
 
 .dark-mode {
-    //background: #0c0c0d;
+    background: #0c0c0d;
     background-color: $dark-mode-color;
 }
 
@@ -355,16 +358,21 @@ strong {
 }
 
 .dark-mode .small-text {
-    background: #121212; // #0d0c15;
+    background: #121212; //#0d0c15;
     color: $main-color;
-    //  #ffffff
+    //#ffffff
     ;
 }
 
-// .dark-mode .card-img-top .card-body .card-headline {
-//    // background-color: #1b4c65;
-//     //color: $body-font-color;
-// }
+.dark-mode .resume {
+    color: #e7e7e7;
+}
+
+.dark-mode .card-img-top .card-body .card-headline {
+    background-color: #1b4c65;
+    color: $body-font-color;
+}
+
 .dark-mode .feature-card .uil,
 .dark-mode .navbar-light .navbar-brand,
 .dark-mode h1,
@@ -377,13 +385,84 @@ strong {
     color: #ffffff;
 }
 
+.dark-mode .todo li {
+    display: flex;
+    color: #e7e7e7;
+    list-style: none;
+    margin: 20px 0;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 15px 10px 15px 0;
+    justify-content: space-between;
+}
+
+.dark-mode .todo button {
+    background-color: transparent;
+    border: none;
+    color: #696969;
+    ;
+    ;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.dark-mode .deleteAll {
+    background-color: transparent;
+    color: $border-color;
+}
+
+.dark-mode .deleteAll:hover {
+    background-color: $button-color;
+    color: $border-color;
+}
+
+.dark-mode .formInput input {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 1px solid rgb(139, 139, 139);
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    padding: 15px 15px;
+    width: 100%;
+}
+
+.dark-mode .btn-add i {
+    color: $border-color;
+}
+
+.dark-mode .btn-add i:hover {
+    color: $button-color;
+}
+
+.dark-mode .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid $body-font-color;
+    border-radius: 5px;
+}
+
+.dark-mode .checkContainer .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid $border-color;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
 .dark-mode .owl-carousel .owl-nav button.owl-next,
 .dark-mode .owl-carousel .owl-nav button.owl-prev,
 .dark-mode .owl-carousel button.owl-dot {
     color: #ffffff;
 }
 
-// TIMELINE
+//TIMELINE 
 .timeline-wrapper {
     position: relative;
     padding-bottom: 10px;
@@ -434,14 +513,14 @@ strong {
     }
 }
 
-// GOOGLE MAP
+//GOOGLE MAP 
 .google-map {
     iframe {
         width: 100%;
     }
 }
 
-// CONTACT FORM
+//CONTACT FORM
 .contact-form {
     position: relative;
     .form-control {
@@ -484,7 +563,7 @@ strong {
     }
 }
 
-// SOCIAL LINKS
+//SOCIAL LINKS 
 .social-links {
     .uil {
         color: #f7f3f3;
@@ -497,7 +576,7 @@ strong {
     }
 }
 
-//TO DO LIST styles
+//TO DO LIST styles 
 .todopart {
     width: 500px;
     ;
@@ -509,7 +588,7 @@ form {
 }
 
 .formInput input {
-    color: lightgray;
+    color: rgb(0, 0, 0);
     background-color: transparent;
     border: 1px solid #555;
     border-radius: 5px;
@@ -538,8 +617,7 @@ input:required:valid {
 }
 
 .btn-add i {
-    color: #ffc200;
-    ;
+    color: #808080;
 }
 
 .btn-add i:hover {
@@ -553,7 +631,7 @@ input:required:valid {
 
 .todo li {
     display: flex;
-    color: #d3d3d3;
+    color: #0f0d0d;
     list-style: none;
     margin: 20px 0;
     background-color: transparent;
@@ -565,7 +643,7 @@ input:required:valid {
 .todo button {
     background-color: transparent;
     border: none;
-    color: #ffc200;
+    color: #808080;
     ;
     cursor: pointer;
     font-size: 18px;
@@ -573,6 +651,14 @@ input:required:valid {
 
 i {
     vertical-align: middle;
+}
+
+.todolink {
+    color: #5785ca!important;
+}
+
+.todolink:hover {
+    color: $button-color !important;
 }
 
 .deleteAll {
@@ -584,7 +670,7 @@ i {
 }
 
 .deleteAll:hover {
-    background-color: #41323c;
+    background-color: #ffc200;
 }
 
 .deleteAll i {
@@ -629,24 +715,22 @@ i {
     height: 25px;
     width: 25px;
     background-color: transparent;
-    border: 1px solid #555555;
+    border: 1px solid $body-font-color;
     border-radius: 5px;
 }
 
 
 /* On mouse-over, add a grey background color */
 
-.checkContainer:hover input~.checkmark {
-    background-color: #555;
-}
-
+// .checkContainer:hover input~.checkmark {
+//     background-color: $button-color;
+// }
 
 /* When the checkbox is checked, add a blue background */
 
-.checkContainer input:checked~.checkmark {
-    background-color: #555;
-}
-
+// .checkContainer input:checked~.checkmark {
+//     background-color: #ecb632;
+// }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 
@@ -671,12 +755,12 @@ i {
     top: 4px;
     width: 5px;
     height: 10px;
-    border: solid #ffc200;
+    border: solid $body-font-color;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
 
-// RESPONSIVE STYLES
+//RESPONSIVE STYLES
 @media (min-width: 1270px) {
     .owl-theme {
         .owl-dots {

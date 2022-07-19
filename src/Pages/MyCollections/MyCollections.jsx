@@ -1,14 +1,14 @@
 import React from "react";
 import s from "./myCollections.module.scss";
 import LayoutWrapper from "../../hoc/Layout";
-import { section, placeholder } from "react-bootstrap";
+import { section, placeholder, Row, Col, Container } from "react-bootstrap";
 
 function MyCollections() {
   return (
     <main>
-      <section className="py-2 text-center container">
-        <div className="row py-lg-2">
-          <div className="col-lg-6 col-md-8 mx-auto">
+      <Container className="py-2 text-center container">
+        <Row className="py-lg-2">
+          <Col className="col-lg-6 col-md-8 mx-auto">
             <h3 className="mb-3">My Collections</h3>
             <a
               href="/newList"
@@ -18,14 +18,14 @@ function MyCollections() {
             >
               New List
             </a>
-          </div>
-        </div>
-      </section>
+          </Col>
+        </Row>
+      </Container>
 
       <div className="album py-5 ">
-        <div className="container">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div className="col">
+        <Container>
+          <Row className=" row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <Col>
               <div className="card shadow-sm">
                 <placeholder
                   width="100%"
@@ -55,8 +55,8 @@ function MyCollections() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col">
+            </Col>
+            <Col>
               <div className="card shadow-sm">
                 <placeholder
                   width="100%"
@@ -86,8 +86,8 @@ function MyCollections() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col">
+            </Col>
+            <Col>
               <div className="card shadow-sm">
                 <placeholder
                   width="100%"
@@ -117,9 +117,9 @@ function MyCollections() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Col>
 
-            <div className="col">
+            <Col>
               <div className="card shadow-sm">
                 <placeholder
                   width="100%"
@@ -149,8 +149,8 @@ function MyCollections() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col">
+            </Col>
+            <Col>
               <div className="card shadow-sm">
                 <placeholder
                   width="100%"
@@ -180,8 +180,8 @@ function MyCollections() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col">
+            </Col>
+            <Col>
               <div className="card shadow-sm">
                 <placeholder
                   width="100%"
@@ -211,9 +211,9 @@ function MyCollections() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </main>
   );
