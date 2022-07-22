@@ -12,7 +12,9 @@ const Menu = () => {
       className="nav navbar-expand-sm navbar-light"
     >
       <Container>
-        <Navbar.Brand href="/">DoList </Navbar.Brand>
+        <Navbar.Brand href="/" className="mb-5">
+          DoList
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className=" navbar-nav mx-auto">
@@ -31,6 +33,10 @@ const Menu = () => {
             <Nav.Link href="/about" className="nav-link">
               {" "}
               About
+            </Nav.Link>
+            <Nav.Link href="/login" className="nav-link">
+              {" "}
+              Login
             </Nav.Link>
           </Nav>
           <Nav>

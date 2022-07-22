@@ -41,58 +41,62 @@ function Login() {
           <div>
             <img
               src="../img/about1.png"
-              className="w-5 ml-5 mt-1 pt-1 about-image png"
+              className=" about-image png"
               thumbnail
               style={{ border: "none" }}
             />
           </div>
         </Col>
         <Col>
-          <div>
+          <div className="contact-form text-center">
+            <br /> <br />
             <br />
+            <br /> <br />
+            <h3 className="mb-4"> Sign in </h3>
             <Form
-              className={` text-center w-1 ml-1 mt-5 pt-5  ${styles.contact_form}`}
+              className={` text-center   ${styles.contact_form}`}
               onSubmit={handleSubmit}
             >
-              <h3 className="mb-4"> Sign in </h3>
-              <Form.Group>
-                <Form.Control
-                  type="username"
-                  placeholder="Username"
-                  className={` ml-5 ${styles.form_control}`}
-                  name="username"
-                  value={values.username}
-                  onChange={handleChange}
-                />
-                {errors.username && <p>{errors.username}</p>}
-              </Form.Group>
-              <Form.Group>
-                <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  className={` ml-5 ${styles.form_control}`}
-                  name="password"
-                  value={values.password}
-                  onChange={handleChange}
-                />
-                {errors.password && <p>{errors.password}</p>}
-              </Form.Group>
-
-              <div>
-                <Button
-                  type="submit"
-                  className={`btn ${styles.form_control} && ${styles.submit_btn}`}
-                >
-                  Login
-                </Button>
-              </div>
-              <div>
-                <Form.Group>
-                  <span className="mr-2">
-                    Don't have an account? <a href="/register">Sign up now</a>
-                  </span>
+              <Row>
+                <Form.Group className="col-12">
+                  <Form.Control
+                    type="username"
+                    placeholder="Username"
+                    className={` ml-5 ${styles.form_control}`}
+                    name="username"
+                    value={values.username}
+                    onChange={handleChange}
+                  />
+                  {errors.username && <p>{errors.username}</p>}
                 </Form.Group>
-              </div>
+                <Form.Group className="col-12">
+                  <Form.Control
+                    type="password"
+                    placeholder="Password"
+                    className={` ml-5 ${styles.form_control}`}
+                    name="password"
+                    value={values.password}
+                    onChange={handleChange}
+                  />
+                  {errors.password && <p>{errors.password}</p>}
+                </Form.Group>
+
+                <div>
+                  <Button
+                    type="submit"
+                    className={`btn ${styles.form_control} && ${styles.submit_btn}`}
+                  >
+                    Login
+                  </Button>
+                </div>
+                <div>
+                  <Form.Group>
+                    <span className="mr-2">
+                      Don't have an account? <a href="/register">Sign up now</a>
+                    </span>
+                  </Form.Group>
+                </div>
+              </Row>
             </Form>
           </div>
         </Col>

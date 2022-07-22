@@ -42,7 +42,7 @@ function Register() {
           <div>
             <img
               src="../img/about1.png"
-              className="w-5 ml-5 mt-1 pt-1 "
+              className="png"
               thumbnail
               style={{ border: "none" }}
             />

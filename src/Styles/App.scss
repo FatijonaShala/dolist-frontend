@@ -3,8 +3,6 @@
 //VARIABLES 
 $font-base: 'Maven Pro',
 sans-serif;
-$font-second: 'Comfortaa',
-cursive;
 $body-font-size: 18px;
 $h1-font-size: 2.8em;
 $h2-font-size: 2.4em;
@@ -28,7 +26,7 @@ $link-font-size: 16px;
 
 body {
     font-family: $font-base;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .full-screen {
@@ -63,7 +61,6 @@ a {
 }
 
 .navbar-brand {
-    font-family: $font-second;
     .uil {
         font-size: 40px;
     }
