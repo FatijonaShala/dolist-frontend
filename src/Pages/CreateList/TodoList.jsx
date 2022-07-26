@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Plus from "@iconscout/react-unicons/icons/uil-plus";
 import Trash from "@iconscout/react-unicons/icons/uil-trash";
 import Pen from "@iconscout/react-unicons/icons/uil-pen";
+import Save from "@iconscout/react-unicons/icons/uil-file-bookmark-alt";
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -73,41 +74,58 @@ function TodoList() {
     <>
       <Container className="resume py-5 text-center">
         <div className="todopart">
-          <h5 className="mb-2"> My To - Do List </h5>
+          <h5 className="mb-2">
+            {" "}
+            My To - Do List
+            <button
+              className="btn-add btn-sm btn-outline-secondary"
+              type="save"
+              alt="Save List"
+            >
+              <i className="fa-5x">
+                <Save />
+              </i>
+            </button>
+          </h5>
+
           <div className="card-body">
             <form
               className="formInput"
               onSubmit={handleSubmit}
-              handleChange={handleChange}
+              onChange={handleChange}
             >
-              <label htmlFor="taskInput"> </label>{" "}
+              <label htmlFor="taskInput"> </label>
               <input type="text" onChange={handleChange} value={todo} />
-              <button className="btn-add" type="submit" alt="Add task">
+
+              <button
+                className="btn-add btn-sm btn-outline-secondary"
+                type="submit"
+                alt="Add task"
+              >
                 <i className="fa-5x">
                   <Plus />
-                </i>{" "}
-              </button>{" "}
-            </form>{" "}
+                </i>
+              </button>
+            </form>
             <ul className="nav nav-pills todo-nav">
               <li role="presentation" className="nav-item all-task active">
                 <a href="#" className="todolink nav-link">
-                  All{" "}
-                </a>{" "}
-              </li>{" "}
+                  All
+                </a>
+              </li>
               <li role="presentation" className="nav-item active-task">
                 <a href="#" className="todolink nav-link">
-                  Active{" "}
-                </a>{" "}
-              </li>{" "}
+                  Active
+                </a>
+              </li>
               <li role="presentation" className="nav-item completed-task">
                 <a href="#" className="todolink nav-link">
-                  Completed{" "}
-                </a>{" "}
-              </li>{" "}
-            </ul>{" "}
+                  Completed
+                </a>
+              </li>
+            </ul>
           </div>
           <ul className="todo formInput">
-            {" "}
             {todos.map((todo) => (
               <li key={todo.id}>
                 <div className="checkAndTask">
@@ -117,11 +135,10 @@ function TodoList() {
                       id="completed"
                       checked={todo.completed}
                       onChange={() => toggleComplete(todo.id)}
-                    />{" "}
-                    <span className="checkmark"> </span>{" "}
+                    />
+                    <span className="checkmark"> </span>
                   </label>
                   <label htmlFor="taskInput">
-                    {" "}
                     {todo.id === todoEditing ? (
                       <input
                         type="text"
@@ -129,11 +146,10 @@ function TodoList() {
                       />
                     ) : (
                       <span className="task-text"> {todo.text} </span>
-                    )}{" "}
-                  </label>{" "}
+                    )}
+                  </label>
                 </div>
                 <div className="btn-group">
-                  {" "}
                   {todo.id === todoEditing ? (
                     <button
                       className="btn btn-sm btn-outline-secondary btn-add"
@@ -141,7 +157,7 @@ function TodoList() {
                     >
                       <i>
                         <Pen />
-                      </i>{" "}
+                      </i>
                     </button>
                   ) : (
                     <button
@@ -150,7 +166,7 @@ function TodoList() {
                     >
                       <i>
                         <Pen />
-                      </i>{" "}
+                      </i>
                     </button>
                   )}
                   <button
@@ -159,13 +175,12 @@ function TodoList() {
                   >
                     <i>
                       <Trash />
-                    </i>{" "}
-                  </button>{" "}
-                </div>{" "}
+                    </i>
+                  </button>
+                </div>
               </li>
-            ))}{" "}
+            ))}
             <div>
-              {" "}
               {todos.length > 1 && (
                 <p>
                   <button
@@ -175,14 +190,14 @@ function TodoList() {
                     <i>
                       <Trash />
                     </i>
-                    Delete All{" "}
-                  </button>{" "}
+                    Delete All
+                  </button>
                 </p>
-              )}{" "}
-            </div>{" "}
-          </ul>{" "}
-        </div>{" "}
-      </Container>{" "}
+              )}
+            </div>
+          </ul>
+        </div>
+      </Container>
     </>
   );
 }

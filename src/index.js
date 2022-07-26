@@ -6,13 +6,16 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ThemeContextWrapper from "../src/context/ThemeContext";
+import SettingsContextProvider from "../src/context/SettingsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // ReactDOM.render(
   <React.StrictMode>
     <ThemeContextWrapper>
-      <App />
+      <SettingsContextProvider>
+        <App />
+      </SettingsContextProvider>{" "}
     </ThemeContextWrapper>{" "}
   </React.StrictMode>
   // document.getElementById("root")

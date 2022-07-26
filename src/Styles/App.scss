@@ -757,6 +757,113 @@ i {
     transform: rotate(45deg);
 }
 
+// Style timer
+.container-timer {
+    color: #c9ccea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+    min-height: 100vh;
+    //background: rgb(39,42,85);
+    //background: radial-gradient(circle, #1E2140 0%, #151932 65%); 
+}
+
+.container-timer h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.2rem;
+    // margin-top: 0rem;
+}
+
+.container-timer .labels {
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: .3rem .3rem;
+    //background-color: none;
+    border-radius: 1.5rem;
+}
+
+.active-label {
+    color: #0C0E1B;
+    background-color: $main-color;
+    //#FE6F6B;
+}
+
+.timer-container {
+    display: flex;
+    // flex: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 7.5rem;
+    color: #efefef;
+    background: #151932;
+    font-size: 3.5rem;
+    box-shadow: 0.5rem 1rem 1.5rem rgba(8, 8, 8, 0.6);
+    margin-top: 1rem;
+}
+
+.timer-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem
+}
+
+.timer-button {
+    //color: #0C0E1B;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 3rem;
+    margin: 0.2rem;
+    background: $button-color;
+    // #0C0E1B;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.timer-button:hover {
+    background: $body-font-color;
+    color: white;
+}
+
+.timer-button-wrapper button.active {
+    color: #0C0E1B;
+    background-color: #C9CCEA;
+    border: 1px solid #0C0E1B;
+}
+
+.timer-form-container {
+    text-align: center;
+}
+
+.timer-input-wrapper {
+    margin: 1.5rem;
+}
+
+.timer-input-wrapper .input {
+    height: 50px;
+    width: 50px;
+    padding: 0.2rem;
+    background-color: #0C0E1B;
+    color: #C9CCEA;
+    border: none;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+    text-align: center;
+    font-size: 16pt;
+}
+
 //RESPONSIVE STYLES
 @media (min-width: 1270px) {
     .owl-theme {

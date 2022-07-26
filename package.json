@@ -13,6 +13,7 @@
     "react-apexcharts": "^1.4.0",
     "react-beautiful-dnd": "^13.1.0",
     "react-bootstrap": "^2.2.3",
+    "react-countdown-circle-timer": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.31.3",
     "react-icons": "^4.4.0",
