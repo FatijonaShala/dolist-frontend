@@ -43,7 +43,7 @@ function About() {
 
             <div className="col-lg-6 col-12">
               <div className="about-image png">
-                <img src="../img/bg2.png" className="img-fluid" alt="svg" />
+                <img src="../img/bg3.png" className="img-fluid" alt="svg" />
               </div>
             </div>
           </Row>

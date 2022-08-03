@@ -44,7 +44,7 @@ const Menu = () => {
               id="collasible-nav-dropdown"
               title={
                 <i>
-                  <User className={Navstyle.color_mode_icon} />
+                  <User className="color-mode-icon" />
                 </i>
               }
               href="/profile"
@@ -64,10 +64,10 @@ const Menu = () => {
           </Nav>
 
           <Nav className="nav-item">
-            <Nav.Link className={`${Navstyle.navbar_nav} nav-link ml-lg-auto `}>
+            <Nav.Link className="navbar-nav nav-link ml-lg-auto">
               <div className="ml-lg-4">
                 <div
-                  className={` ${Navstyle.color_mode} d-lg-flex justify-content-center align-items-center `}
+                  className={` color-mode d-lg-flex justify-content-center align-items-center `}
                 >
                   <i>
                     <ColorMode />

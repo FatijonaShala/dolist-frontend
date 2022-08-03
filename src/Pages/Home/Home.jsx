@@ -22,13 +22,13 @@ function Home() {
                 </small>
                 <h1 className="animated animated-text">
                   <span className="mr-2"> we help you to </span>
-                  <div className={`${style.animated_info} `}>
+                  <span className="animated-info">
                     {items.map((elem, i) => (
-                      <span key={i} className={style.animated_item}>
+                      <span className="animated-item" key={i}>
                         {elem}
                       </span>
                     ))}
-                  </div>
+                  </span>
                 </h1>
 
                 <div className={`  ${style.custom_btn_group} && mt-4`}>
@@ -44,7 +44,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            {/* </div> */}
+
             <div className="col-lg-5 col-md-12 col-12">
               <div className="about_image svg">
                 <img src="../img/header.svg" className="img-fluid" alt="svg" />

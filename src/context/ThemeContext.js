@@ -12,7 +12,9 @@ export const ThemeContext = createContext({
 });
 
 export default function ThemeContextWrapper(props) {
-  const [theme, setTheme] = useState(themes.dark);
+  const [theme, setTheme] = useState(
+    localStorage.getItem(themes.dark) === "true"
+  );
 
   function changeTheme(theme) {
     setTheme(theme);
@@ -22,11 +24,14 @@ export default function ThemeContextWrapper(props) {
     switch (theme) {
       case themes.dark:
         document.body.classList.add("dark-mode");
-        //localStorage.getItem("dark-mode");
+        localStorage.setItem(themes.dark, theme);
+
         break;
       case themes.light:
       default:
         document.body.classList.remove("dark-mode");
+        localStorage.setItem(themes.light, theme);
+
         break;
     }
   }, [theme]);

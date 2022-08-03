@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import React, { useState, useEffect, useContext } from "react";
+import { Container, Dropdown } from "react-bootstrap";
 import Plus from "@iconscout/react-unicons/icons/uil-plus";
 import Trash from "@iconscout/react-unicons/icons/uil-trash";
 import Pen from "@iconscout/react-unicons/icons/uil-pen";
 import Save from "@iconscout/react-unicons/icons/uil-file-bookmark-alt";
+import Timer from "@iconscout/react-unicons/icons/uil-stopwatch";
+import { SettingsContext } from "../../context/SettingsContext";
+import Button from "./Button";
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -11,7 +14,7 @@ function TodoList() {
   const [todoEditing, setTodoEditing] = useState(null);
   const [editingText, setEditingText] = useState("");
 
-  React.useEffect(() => {
+  useEffect(() => {
     const json = localStorage.getItem("todos");
     const loadedTodos = JSON.parse(json);
     if (loadedTodos) {
@@ -19,7 +22,7 @@ function TodoList() {
     }
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const json = JSON.stringify(todos);
     localStorage.setItem("todos", json);
   }, [todos]);
@@ -70,23 +73,41 @@ function TodoList() {
     setTodos([]);
   };
 
+  const { executing, startAnimate, startTimer, updateExecute } =
+    useContext(SettingsContext);
+
+  useEffect(() => {
+    updateExecute(executing);
+  }, [executing, startAnimate]);
+
   return (
     <>
       <Container className="resume py-5 text-center">
         <div className="todopart">
-          <h5 className="mb-2">
-            {" "}
-            My To - Do List
-            <button
-              className="btn-add btn-sm btn-outline-secondary"
-              type="save"
-              alt="Save List"
-            >
-              <i className="fa-5x">
-                <Save />
-              </i>
-            </button>
-          </h5>
+          <Dropdown>
+            <h3>
+              My To - Do List
+              <Dropdown.Toggle
+                className="btn-add btn "
+                style={{ border: "none" }}
+                variant="none"
+                id="dropdown-basic"
+                alt="Save List"
+              >
+                <i className="fa-5x" hover="Save List">
+                  <Save />
+                </i>
+              </Dropdown.Toggle>
+            </h3>
+            <small>Accomplish your daily goals</small>
+            <Dropdown.Menu>
+              <Dropdown.Header>Save list to</Dropdown.Header>
+              <Dropdown.Item href="#/action-1">Collection 1 </Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Collection 2</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Collection 3 </Dropdown.Item>
+              <Dropdown.Item href="#/action-3">New Collection</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
 
           <div className="card-body">
             <form
@@ -107,7 +128,7 @@ function TodoList() {
                 </i>
               </button>
             </form>
-            <ul className="nav nav-pills todo-nav">
+            {/* <ul className="nav nav-pills todo-nav">
               <li role="presentation" className="nav-item all-task active">
                 <a href="#" className="todolink nav-link">
                   All
@@ -123,8 +144,9 @@ function TodoList() {
                   Completed
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
+
           <ul className="todo formInput">
             {todos.map((todo) => (
               <li key={todo.id}>
@@ -177,6 +199,20 @@ function TodoList() {
                       <Trash />
                     </i>
                   </button>
+
+                  <Button
+                    title={
+                      <i>
+                        <Timer />
+                      </i>
+                    }
+                    activeClass={"btn btn-sm btn-outline-secondary btn-add"}
+                    _callback={startTimer}
+                  >
+                    {/* <i>
+                      <Timer />
+                    </i> */}
+                  </Button>
                 </div>
               </li>
             ))}

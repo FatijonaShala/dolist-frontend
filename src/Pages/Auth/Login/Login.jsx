@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../Form.module.scss";
-import { Form, Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Form, Container, Row, Col, Button } from "react-bootstrap";
 import LayoutWrapper from "../../../hoc/Layout";
 import validate from "./validation";
 import { useNavigate } from "react-router-dom";
@@ -42,7 +42,7 @@ function Login() {
             <img
               src="../img/about1.png"
               className=" about-image png"
-              thumbnail
+              alt="DoListlogo"
               style={{ border: "none" }}
             />
           </div>
@@ -54,7 +54,7 @@ function Login() {
             <br /> <br />
             <h3 className="mb-4"> Sign in </h3>
             <Form
-              className={` text-center   ${styles.contact_form}`}
+              className={`   ${styles.contact_form} text-center `}
               onSubmit={handleSubmit}
             >
               <Row>

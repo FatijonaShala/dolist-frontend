@@ -3,9 +3,9 @@ import { SettingsContext } from "../../context/SettingsContext";
 
 const SetPomodoro = () => {
   const [newTimer, setNewTimer] = useState({
-    work: 0.2,
-    short: 0.1,
-    long: 0.5,
+    work: 30.0,
+    short: 5,
+    long: 15,
     active: "work",
   });
 
@@ -43,7 +43,7 @@ const SetPomodoro = () => {
       <form noValidate onSubmit={handleSubmit}>
         <div className="timer-input-wrapper">
           <input
-            className=" input input-timer"
+            className=" input"
             type="number"
             name="work"
             onChange={handleChange}
