@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar, Nav, Container, NavDropdown, Image } from "react-bootstrap";
 import Navstyle from "./navbar.module.scss";
 import User from "@iconscout/react-unicons/icons/uil-user";
+
+import DoList from "@iconscout/react-unicons/icons/uil-check";
 import ColorMode from "./ThemeChangeButton";
 
 const Menu = () => {
@@ -12,11 +14,14 @@ const Menu = () => {
       className="nav navbar-expand-sm navbar-light"
     >
       <Container>
-        <Navbar.Brand href="/" className="mb-5">
+        <Navbar.Brand className="navbar-brand uil" href="/">
+          <i>
+            <DoList />
+          </i>
           DoList
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-nabar-nav">
           <Nav className=" navbar-nav mx-auto">
             <Nav.Link href="/newList" className="nav-link">
               {" "}
@@ -39,8 +44,10 @@ const Menu = () => {
               Login
             </Nav.Link>
           </Nav>
+
           <Nav>
             <NavDropdown
+              className="navv-dropdown"
               id="collasible-nav-dropdown"
               title={
                 <i>

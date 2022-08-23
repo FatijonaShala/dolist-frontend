@@ -32,43 +32,43 @@ function Profile() {
             {/* <div className="contact-form"> */}
             <Form className={style.contact_form}>
               <Row className="mt-2">
-                <Col className="col-md-6">
+                <Col className="col-md-6 col-12 ">
                   <label className="labels">Username</label>
                   <Form.Control
-                    className={` ml-5 ${style.form_control}`}
+                    className={` ${style.form_control} mb-5 `}
                     type="username"
                     placeholder="username"
                   />
                 </Col>
-                <Col className="col-md-6">
+                <Col className="col-md-6 col-12">
                   <label className="labels">Email</label>
                   <Form.Control
-                    className={` ml-5 ${style.form_control}`}
+                    className={`  ${style.form_control}  mb-5 `}
                     type="email"
                     placeholder="email"
                   />
                 </Col>
                 {/* </Row> */}
                 {/* <Row className=" mt-2"> */}
-                <Col className="col-md-6">
+                <Col className="col-md-6 col-12 ">
                   <label className="labels">Password</label>
                   <Form.Control
-                    className={` ml-5 ${style.form_control}`}
+                    className={`  ${style.form_control}  mb-5`}
                     type="password"
                     placeholder="password"
                   />
                 </Col>
 
-                <Col className="col-md-6">
+                <Col className="col-md-6 col-12 ">
                   <label className="labels">Confirm Password</label>
                   <Form.Control
-                    className={` ml-5 ${style.form_control}`}
+                    className={` ${style.form_control}  mb-5`}
                     type="password"
                     placeholder="confirm password"
                   />
                 </Col>
 
-                <div className="mt-1 d-flex justify-content align-items-center ml-lg-auto col-lg-6 ">
+                <div className="mt-1 d-flex justify-content align-items-center text-center ml-lg-auto col-lg-6 ">
                   <Form.Control
                     type="submit"
                     className={`btn ${style.form_control} && ${style.submit_btn}`}

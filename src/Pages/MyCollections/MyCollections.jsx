@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./myCollections.module.scss";
 import LayoutWrapper from "../../hoc/Layout";
-import { section, placeholder, Row, Col, Container } from "react-bootstrap";
+import { section, Placeholder, Row, Col, Container } from "react-bootstrap";
 
 function MyCollections() {
   return (
@@ -27,7 +27,7 @@ function MyCollections() {
           <Row className=" row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <Col>
               <div className="card shadow-sm">
-                <placeholder
+                <Placeholder
                   width="100%"
                   height="225"
                   className="card-img-top"
@@ -58,7 +58,7 @@ function MyCollections() {
             </Col>
             <Col>
               <div className="card shadow-sm">
-                <placeholder
+                <Placeholder
                   width="100%"
                   height="225"
                   className="card-img-top"
@@ -89,7 +89,7 @@ function MyCollections() {
             </Col>
             <Col>
               <div className="card shadow-sm">
-                <placeholder
+                <Placeholder
                   width="100%"
                   height="225"
                   className="card-img-top"
@@ -121,7 +121,7 @@ function MyCollections() {
 
             <Col>
               <div className="card shadow-sm">
-                <placeholder
+                <Placeholder
                   width="100%"
                   height="225"
                   className="card-img-top"
@@ -152,7 +152,7 @@ function MyCollections() {
             </Col>
             <Col>
               <div className="card shadow-sm">
-                <placeholder
+                <Placeholder
                   width="100%"
                   height="225"
                   className="card-img-top"
@@ -183,7 +183,7 @@ function MyCollections() {
             </Col>
             <Col>
               <div className="card shadow-sm">
-                <placeholder
+                <Placeholder
                   width="100%"
                   height="225"
                   className="card-img-top"

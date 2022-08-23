@@ -38,21 +38,18 @@ function Register() {
   return (
     <Container className="resume py-5 d-lg-flex justify-content-center align-items-center">
       <Row>
-        <Col>
+        <Col className="col-lg-6 col-12 d-flex justify-content-center align-items-center">
           <div>
             <img
               src="../img/about1.png"
-              className="png"
-              thumbnail
+              className="about-logo png"
+              thumbnail="true"
               style={{ border: "none" }}
             />
           </div>
         </Col>
-        <Col>
-          <div className="contact-form text-center ">
-            {" "}
-            <br /> <br />
-            <br />
+        <Col className="col-lg-6 col-12">
+          <div className="contact-form text-center py-5 ">
             <h3 className="mb-4"> Sign up</h3>
             <Form className={` ${styles.contact_form}`} onSubmit={handleSubmit}>
               <Row>

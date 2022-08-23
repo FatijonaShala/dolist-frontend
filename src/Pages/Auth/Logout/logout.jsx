@@ -7,23 +7,22 @@ import Login from "../Login";
 function logout() {
   return (
     <div>
-      <Container>
+      <Container className=" py-5 d-lg-flex justify-content-center align-items-center">
         <Row>
-          <Col>
-            <div>
-              <img
-                src="../img/about1.png"
-                className="w-5 ml-5 mt-1 pt-1 about-image png"
-                thumbnail
-                style={{ border: "none" }}
-              />
-            </div>
+          <Col className="col-lg-6 col-12 d-flex justify-content-center align-items-center ">
+            <img
+              src="../img/about1.png"
+              className=" about-logo png"
+              alt="DoListlogo"
+              style={{ border: "none" }}
+            />
           </Col>
-          <Col>
-            <div className="text-center w-1 ml-5 mt-5 pt-5">
-              <h1 className="mb-1"> Sign in </h1>
+          <Col className="col-lg-6 col-12 d-flex justify-content-center align-items-center ">
+            <div className=" contact-form text-center ">
+              <h3 className="  mb-4"> Sad to see you go </h3>
+
               <span className="mr-2">
-                Don't have an account? <a href="/register">Sign up now</a>
+                to continue to DoList <a href="/login">sign in now</a>
               </span>
             </div>
           </Col>

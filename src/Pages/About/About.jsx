@@ -29,12 +29,16 @@ function About() {
                       future of work transcends all kinds of borders. Ambition
                       without rest isn't sustainable. And working without
                       ambition breeds complacency. Our team is proof you can
-                      have both. As DoList builds the future of work, many more
-                      people across the globe will thrive, both professionally
-                      and personally. We opt for solutions that will get us
-                      where we want to be in the long-term. We don’t have an
-                      exit strategy – we have a mission to help shape the future
-                      of work for decades to come.
+                      have both.
+                      {/* </p>
+       
+                  <p> */}
+                      As DoList builds the future of work, many more people
+                      across the globe will thrive, both professionally and
+                      personally. We opt for solutions that will get us where we
+                      want to be in the long-term. We don’t have an exit
+                      strategy – we have a mission to help shape the future of
+                      work for decades to come.
                     </p>
                   </div>
                 </div>
@@ -50,7 +54,7 @@ function About() {
         </Container>
       </section>
 
-      <section className="contact py-5" id="contact">
+      <section className="contact " id="contact">
         <Container>
           <Row>
             <div className="col-lg-5 mr-lg-5 col-12">
@@ -59,14 +63,14 @@ function About() {
                   <img
                     src="../img/about1.png"
                     className="img-fluid"
-                    alt="svg"
+                    alt="logo"
                   />
                 </div>
               </div>
             </div>
 
             <div className="col-lg-6 col-12">
-              <div className="contact-form">
+              <div className="contact-form py-5">
                 <h2 className="mb-4">Contact Us</h2>
                 <Form>
                   <Row>

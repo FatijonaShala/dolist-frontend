@@ -35,26 +35,22 @@ function Login() {
   };
 
   return (
-    <Container>
+    <Container className=" py-5 d-lg-flex justify-content-center align-items-center">
       <Row>
-        <Col>
-          <div>
-            <img
-              src="../img/about1.png"
-              className=" about-image png"
-              alt="DoListlogo"
-              style={{ border: "none" }}
-            />
-          </div>
+        <Col className="col-lg-6 col-12 d-flex justify-content-center align-items-center ">
+          <img
+            src="../img/about1.png"
+            className=" about-logo png"
+            alt="DoListlogo"
+            style={{ border: "none" }}
+          />
         </Col>
-        <Col>
-          <div className="contact-form text-center">
-            <br /> <br />
-            <br />
-            <br /> <br />
-            <h3 className="mb-4"> Sign in </h3>
+        <Col className="col-lg-6 col-12">
+          <div className=" contact-form text-center py-5">
+            <h3 className="  mb-4"> Sign in </h3>
+            <span className="mr-2">to continue to DoList</span>
             <Form
-              className={`   ${styles.contact_form} text-center `}
+              className={`   ${styles.contact_form} `}
               onSubmit={handleSubmit}
             >
               <Row>

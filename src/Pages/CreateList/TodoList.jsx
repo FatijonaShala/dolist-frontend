@@ -82,53 +82,53 @@ function TodoList() {
 
   return (
     <>
-      <Container className="resume py-5 text-center">
-        <div className="todopart">
-          <Dropdown>
-            <h3>
-              My To - Do List
-              <Dropdown.Toggle
-                className="btn-add btn "
-                style={{ border: "none" }}
-                variant="none"
-                id="dropdown-basic"
-                alt="Save List"
-              >
-                <i className="fa-5x" hover="Save List">
-                  <Save />
-                </i>
-              </Dropdown.Toggle>
-            </h3>
-            <small>Accomplish your daily goals</small>
-            <Dropdown.Menu>
-              <Dropdown.Header>Save list to</Dropdown.Header>
-              <Dropdown.Item href="#/action-1">Collection 1 </Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Collection 2</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Collection 3 </Dropdown.Item>
-              <Dropdown.Item href="#/action-3">New Collection</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-
-          <div className="card-body">
-            <form
-              className="formInput"
-              onSubmit={handleSubmit}
-              onChange={handleChange}
+      {/* <Container className="resume text-center"> */}
+      <div className=" text-center ml-5">
+        <Dropdown>
+          <h3>
+            My To - Do List
+            <Dropdown.Toggle
+              className="btn-add btn"
+              style={{ border: "none" }}
+              variant="none"
+              id="dropdown-basic"
+              alt="Save List"
             >
-              <label htmlFor="taskInput"> </label>
-              <input type="text" onChange={handleChange} value={todo} />
+              <i className="fa-5x" hover="Save List">
+                <Save />
+              </i>
+            </Dropdown.Toggle>
+          </h3>
+          <small>Accomplish your daily goals</small>
+          <Dropdown.Menu>
+            <Dropdown.Header>Save list to</Dropdown.Header>
+            <Dropdown.Item href="#/action-1">Collection 1 </Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Collection 2</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Collection 3 </Dropdown.Item>
+            <Dropdown.Item href="#/action-3">New Collection</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
 
-              <button
-                className="btn-add btn-sm btn-outline-secondary"
-                type="submit"
-                alt="Add task"
-              >
-                <i className="fa-5x">
-                  <Plus />
-                </i>
-              </button>
-            </form>
-            {/* <ul className="nav nav-pills todo-nav">
+        <div className="card-body">
+          <form
+            className="formInput"
+            onSubmit={handleSubmit}
+            onChange={handleChange}
+          >
+            <label htmlFor="taskInput"> </label>
+            <input type="text" onChange={handleChange} value={todo} />
+
+            <button
+              className="btn-add btn-sm btn-outline-secondary"
+              type="submit"
+              alt="Add task"
+            >
+              <i className="fa-5x">
+                <Plus />
+              </i>
+            </button>
+          </form>
+          {/* <ul className="nav nav-pills todo-nav">
               <li role="presentation" className="nav-item all-task active">
                 <a href="#" className="todolink nav-link">
                   All
@@ -145,95 +145,95 @@ function TodoList() {
                 </a>
               </li>
             </ul> */}
-          </div>
+        </div>
 
-          <ul className="todo formInput">
-            {todos.map((todo) => (
-              <li key={todo.id}>
-                <div className="checkAndTask">
-                  <label className="checkContainer">
-                    <input
-                      type="checkbox"
-                      id="completed"
-                      checked={todo.completed}
-                      onChange={() => toggleComplete(todo.id)}
-                    />
-                    <span className="checkmark"> </span>
-                  </label>
-                  <label htmlFor="taskInput">
-                    {todo.id === todoEditing ? (
-                      <input
-                        type="text"
-                        onChange={(e) => setEditingText(e.target.value)}
-                      />
-                    ) : (
-                      <span className="task-text"> {todo.text} </span>
-                    )}
-                  </label>
-                </div>
-                <div className="btn-group">
+        <ul className="todo formInput">
+          {todos.map((todo) => (
+            <li key={todo.id}>
+              <div className="checkAndTask">
+                <label className="checkContainer">
+                  <input
+                    type="checkbox"
+                    id="completed"
+                    checked={todo.completed}
+                    onChange={() => toggleComplete(todo.id)}
+                  />
+                  <span className="checkmark"> </span>
+                </label>
+                <label htmlFor="taskInput">
                   {todo.id === todoEditing ? (
-                    <button
-                      className="btn btn-sm btn-outline-secondary btn-add"
-                      onClick={() => submitEdits(todo.id)}
-                    >
-                      <i>
-                        <Pen />
-                      </i>
-                    </button>
+                    <input
+                      type="text"
+                      onChange={(e) => setEditingText(e.target.value)}
+                    />
                   ) : (
-                    <button
-                      className="btn btn-sm btn-outline-secondary btn-add"
-                      onClick={() => setTodoEditing(todo.id)}
-                    >
-                      <i>
-                        <Pen />
-                      </i>
-                    </button>
+                    <span className="task-text"> {todo.text} </span>
                   )}
+                </label>
+              </div>
+              <div className="btn-group">
+                {todo.id === todoEditing ? (
                   <button
                     className="btn btn-sm btn-outline-secondary btn-add"
-                    onClick={() => deleteTodo(todo.id)}
+                    onClick={() => submitEdits(todo.id)}
                   >
                     <i>
-                      <Trash />
+                      <Pen />
                     </i>
                   </button>
-
-                  <Button
-                    title={
-                      <i>
-                        <Timer />
-                      </i>
-                    }
-                    activeClass={"btn btn-sm btn-outline-secondary btn-add"}
-                    _callback={startTimer}
+                ) : (
+                  <button
+                    className="btn btn-sm btn-outline-secondary btn-add"
+                    onClick={() => setTodoEditing(todo.id)}
                   >
-                    {/* <i>
+                    <i>
+                      <Pen />
+                    </i>
+                  </button>
+                )}
+                <button
+                  className="btn btn-sm btn-outline-secondary btn-add"
+                  onClick={() => deleteTodo(todo.id)}
+                >
+                  <i>
+                    <Trash />
+                  </i>
+                </button>
+
+                <Button
+                  title={
+                    <i>
+                      <Timer />
+                    </i>
+                  }
+                  activeClass={"btn btn-sm btn-outline-secondary btn-add"}
+                  _callback={startTimer}
+                >
+                  {/* <i>
                       <Timer />
                     </i> */}
-                  </Button>
-                </div>
-              </li>
-            ))}
-            <div>
-              {todos.length > 1 && (
-                <p>
-                  <button
-                    className="deleteAll btn-add"
-                    onClick={() => handleRemoveAll()}
-                  >
-                    <i>
-                      <Trash />
-                    </i>
-                    Delete All
-                  </button>
-                </p>
-              )}
-            </div>
-          </ul>
-        </div>
-      </Container>
+                </Button>
+              </div>
+            </li>
+          ))}
+          <div>
+            {todos.length > 1 && (
+              <p>
+                <button
+                  className="deleteAll btn-add"
+                  onClick={() => handleRemoveAll()}
+                >
+                  <i>
+                    <Trash />
+                  </i>
+                  Delete All
+                </button>
+              </p>
+            )}
+          </div>
+        </ul>
+      </div>
+      {/* </Container> */}
     </>
   );
 }

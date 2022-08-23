@@ -23,7 +23,8 @@ const Timer = () => {
   }, [executing, startAnimate]);
 
   return (
-    <Container className=" resume container-timer py-5 text-center">
+    // <Container className=" resume container-timer py-5 text-center">
+    <div className="container-timer text-center align-items-center">
       <h3>Pomodoro</h3>
       <small>Be productive the right way.</small>
       {pomodoro !== 0 ? (
@@ -90,7 +91,8 @@ const Timer = () => {
       ) : (
         <SetPomodoro />
       )}
-    </Container>
+      {/* </Container> */}
+    </div>
   );
 };
 

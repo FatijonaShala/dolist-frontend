@@ -46,7 +46,7 @@ function Home() {
             </div>
 
             <div className="col-lg-5 col-md-12 col-12">
-              <div className="about_image svg">
+              <div className="about-image svg">
                 <img src="../img/header.svg" className="img-fluid" alt="svg" />
               </div>
             </div>

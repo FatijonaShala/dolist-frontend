@@ -63,3 +63,10 @@
 .contact_form .submit_btn:hover {
     background: #474559;
 }
+
+@media (max-width: 991px) {
+    .contact_form .form_control {
+        margin-top: 2em;
+        display: block;
+    }
+}
