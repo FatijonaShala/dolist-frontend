@@ -1,10 +1,13 @@
 import Moon from "@iconscout/react-unicons/icons/uil-moon";
 import Sun from "@iconscout/react-unicons/icons/uil-sun";
 import React, { useState, useEffect } from "react";
+import { useContext } from "react";
 import { ThemeContext, themes } from "../../context/ThemeContext";
 
 function ThemeChangeButton() {
-  const [theme, setTheme] = useState(themes.dark);
+  const { theme } = useContext(ThemeContext);
+  console.log("theme:", theme);
+  //const [theme, setTheme] = useState(themes.dark);
   //themes.light
   //localStorage.getItem(themes.dark) === "true"
 
@@ -18,12 +21,10 @@ function ThemeChangeButton() {
         {({ changeTheme }) => (
           <div
             onClick={() => {
-              setTheme(!theme);
-
-              changeTheme(theme ? themes.dark : themes.light);
+              changeTheme(theme === themes.dark ? themes.light : themes.dark);
             }}
           >
-            {theme ? <Moon /> : <Sun />}
+            {theme === themes.dark ? <Sun /> : <Moon />}
           </div>
         )}
       </ThemeContext.Consumer>
