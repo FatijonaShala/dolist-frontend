@@ -7,13 +7,6 @@ import { ThemeContext, themes } from "../../context/ThemeContext";
 function ThemeChangeButton() {
   const { theme } = useContext(ThemeContext);
   console.log("theme:", theme);
-  //const [theme, setTheme] = useState(themes.dark);
-  //themes.light
-  //localStorage.getItem(themes.dark) === "true"
-
-  // useEffect(() => {
-  //   localStorage.setItem(themes.dark, theme);
-  // }, [theme]);
 
   return (
     <div>
